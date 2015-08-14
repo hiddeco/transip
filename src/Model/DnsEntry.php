@@ -43,9 +43,9 @@ class DnsEntry
      */
     public function __construct($name, $expire, $type, $content)
     {
-        $this->name    = $name;
-        $this->expire  = $expire;
-        $this->type    = $type;
+        $this->name = $name;
+        $this->expire = $expire;
+        $this->type = $type;
         $this->content = $content;
     }
 }

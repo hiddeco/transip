@@ -7,7 +7,6 @@ namespace HiddeCo\TransIP\Model;
  */
 class WhoisContact
 {
-
     const TYPE_REGISTRANT = 'registrant';
     const TYPE_ADMINISTRATIVE = 'administrative';
     const TYPE_TECHNICAL = 'technical';

@@ -17,9 +17,9 @@ class Colocation extends AbstractApi
      * @param string[] $visitors    Names of the visitors for this data-center visit, max amount of visitors is 20
      * @param string   $phoneNumber Phone number to receive access codes on
      *
-     * @return \HiddeCo\TransIP\Model\DataCenterVisitor[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\DataCenterVisitor[]
      */
     public function requestAccess($when, $duration, array $visitors, $phoneNumber)
     {
@@ -35,9 +35,9 @@ class Colocation extends AbstractApi
      * @param int    $expectedDuration Expected duration of the job in minutes
      * @param string $instructions     Instructions on what to do
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function requestRemoteHands($colocationName, $contactName, $phoneNumber, $expectedDuration, $instructions)
     {
@@ -47,9 +47,9 @@ class Colocation extends AbstractApi
     /**
      * Get colocation names.
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getColocationNames()
     {
@@ -62,9 +62,9 @@ class Colocation extends AbstractApi
      *
      * @param string $colocationName Name of the colocation to get the IP addresses for
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getIpAddresses($colocationName)
     {
@@ -79,9 +79,9 @@ class Colocation extends AbstractApi
      *
      * @param string $colocationName Name of the colocation to get the ranges for
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getIpRanges($colocationName)
     {
@@ -98,9 +98,9 @@ class Colocation extends AbstractApi
      * @param string $ipAddress  IP address to create, can be ipv4 or ipv6
      * @param string $reverseDns Reverse DNS name for this IP address
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createIpAddress($ipAddress, $reverseDns)
     {
@@ -116,9 +116,9 @@ class Colocation extends AbstractApi
      *
      * @param string $ipAddress IP address to delete, can be ipv6 or ipv6
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function deleteIpAddress($ipAddress)
     {
@@ -130,9 +130,9 @@ class Colocation extends AbstractApi
      *
      * @param string $ipAddress IP address, can be ipv4 or ipv6
      *
-     * @return string
-     *
      * @throws \SoapFault
+     *
+     * @return string
      */
     public function getReverseDns($ipAddress)
     {
@@ -145,9 +145,9 @@ class Colocation extends AbstractApi
      * @param string $ipAddress  IP address to set the Reverse DNS for, can be ipv4 or ipv6
      * @param string $reverseDns New Reverse DNS, must be a valid value
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setReverseDns($ipAddress, $reverseDns)
     {

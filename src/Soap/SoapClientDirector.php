@@ -21,7 +21,7 @@ class SoapClientDirector
     public function __construct($login, $mode, $endpoint)
     {
         $this->login = $login;
-        $this->mode  = $mode;
+        $this->mode = $mode;
         $this->endpoint = $endpoint;
     }
 

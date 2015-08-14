@@ -4,6 +4,7 @@ namespace HiddeCo\TransIP\Model;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
+ *
  * @see http://en.wikipedia.org/wiki/Cron
  */
 class Cronjob

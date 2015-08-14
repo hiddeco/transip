@@ -5,7 +5,7 @@ namespace HiddeCo\TransIP\Model;
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
-class WebHost
+class Webhost
 {
     /**
      * @var string

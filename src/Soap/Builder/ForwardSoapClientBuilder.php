@@ -21,7 +21,7 @@ class ForwardSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'Forward' => 'HiddeCo\TransIP\Model\Forward'
+            'Forward' => 'HiddeCo\TransIP\Model\Forward',
         ];
     }
 }

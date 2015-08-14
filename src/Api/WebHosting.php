@@ -12,9 +12,9 @@ class WebHosting extends AbstractApi
     /**
      * Get all domain names that have a web hosting package attached to them.
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getWebHostingDomainNames()
     {
@@ -24,9 +24,9 @@ class WebHosting extends AbstractApi
     /**
      * Get available web hosting packages.
      *
-     * @return \HiddeCo\TransIP\Model\WebHostingPackage[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\WebHostingPackage[]
      */
     public function getAvailablePackages()
     {
@@ -43,9 +43,9 @@ class WebHosting extends AbstractApi
      *
      * @param string $domainName Domain name of the web hosting package to get info for
      *
-     * @return \HiddeCo\TransIP\Model\WebHost
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\WebHost
      */
     public function getInfo($domainName)
     {
@@ -58,9 +58,9 @@ class WebHosting extends AbstractApi
      * @param string                                   $domainName        Domain name to order web hosting for
      * @param \HiddeCo\TransIP\Model\WebHostingPackage $webHostingPackage Web hosting package to order
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function order($domainName, $webHostingPackage)
     {
@@ -72,9 +72,9 @@ class WebHosting extends AbstractApi
      *
      * @param string $domainName Domain name to get the upgrades for
      *
-     * @return \HiddeCo\TransIP\Model\WebHostingPackage[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\WebHostingPackage[]
      */
     public function getAvailableUpgrades($domainName)
     {
@@ -87,9 +87,9 @@ class WebHosting extends AbstractApi
      * @param string $domainName        Domain name to upgrade web hosting for
      * @param string $webHostingPackage Web hosting package to upgrade to
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function upgrade($domainName, $webHostingPackage)
     {
@@ -102,9 +102,9 @@ class WebHosting extends AbstractApi
      * @param string $domainName Domain name to cancel the web hosting for
      * @param string $endTime    Time to cancel the web hosting
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancel($domainName, $endTime)
     {
@@ -117,9 +117,9 @@ class WebHosting extends AbstractApi
      * @param string $domainName Domain name to set the FTP password for
      * @param string $password   New FTP password for the web hosting package
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setFtpPassword($domainName, $password)
     {
@@ -132,9 +132,9 @@ class WebHosting extends AbstractApi
      * @param string                         $domainName Domain name to create the cronjob for
      * @param \HiddeCo\TransIP\Model\Cronjob $cronjob    Cronjob to create
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createCronjob($domainName, $cronjob)
     {
@@ -148,9 +148,9 @@ class WebHosting extends AbstractApi
      * @param string                         $domainName Domain name to create the cronjob for
      * @param \HiddeCo\TransIP\Model\Cronjob $cronjob    Cronjob to create
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function deleteCronjob($domainName, $cronjob)
     {
@@ -164,9 +164,9 @@ class WebHosting extends AbstractApi
      * @param string                         $domainName Domain name to create the mail box for
      * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to create
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createMailBox($domainName, $mailBox)
     {
@@ -179,9 +179,9 @@ class WebHosting extends AbstractApi
      * @param string                         $domainName Domain name to modify the mail box for
      * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to modify
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function modifyMailBox($domainName, $mailBox)
     {
@@ -195,9 +195,9 @@ class WebHosting extends AbstractApi
      * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to set the password for
      * @param string                         $password   New password for the mail box
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setMailBoxPassword($domainName, $mailBox, $password)
     {
@@ -210,9 +210,9 @@ class WebHosting extends AbstractApi
      * @param string                         $domainName Domain name to remove the mail box from
      * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to remove
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function deleteMailBox($domainName, $mailBox)
     {
@@ -225,9 +225,9 @@ class WebHosting extends AbstractApi
      * @param string                             $domainName  Domain name to create the mail forward for
      * @param \HiddeCo\TransIP\Model\MailForward $mailForward Mail forward to create
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createMailForward($domainName, $mailForward)
     {
@@ -240,9 +240,9 @@ class WebHosting extends AbstractApi
      * @param string                             $domainName  Domain name to modify the mail forward from
      * @param \HiddeCo\TransIP\Model\MailForward $mailForward Mail forward to modify
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function modifyMailForward($domainName, $mailForward)
     {
@@ -255,9 +255,9 @@ class WebHosting extends AbstractApi
      * @param string                             $domainName  Domain name to delete the mail forward from
      * @param \HiddeCo\TransIP\Model\MailForward $mailForward Mail forward to delete
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function deleteMailForward($domainName, $mailForward)
     {
@@ -270,9 +270,9 @@ class WebHosting extends AbstractApi
      * @param string                    $domainName Domain name to create the database for
      * @param \HiddeCo\TransIP\Model\Db $database   Database to create
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createDatabase($domainName, $database)
     {
@@ -285,9 +285,9 @@ class WebHosting extends AbstractApi
      * @param string                    $domainName Domain name to modify the database from
      * @param \HiddeCo\TransIP\Model\Db $database   Database to modify
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function modifyDatabase($domainName, $database)
     {
@@ -301,9 +301,9 @@ class WebHosting extends AbstractApi
      * @param \HiddeCo\TransIP\Model\Db $database   Database to set the password for
      * @param string                    $password   Password to set
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setDatabasePassword($domainName, $database, $password)
     {
@@ -316,9 +316,9 @@ class WebHosting extends AbstractApi
      * @param string $domainName Domain name to delete the database from
      * @param string $database   Database to delete
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function deleteDatabase($domainName, $database)
     {
@@ -328,12 +328,12 @@ class WebHosting extends AbstractApi
     /**
      * Create a sub domain for a web hosting package.
      *
-     * @param string $domainName               $domainName Domain name to create the sub domain for
+     * @param string                           $domainName $domainName Domain name to create the sub domain for
      * @param \HiddeCo\TransIP\Model\SubDomain $subDomain  Sub domain to create
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createSubDomain($domainName, $subDomain)
     {
@@ -343,7 +343,7 @@ class WebHosting extends AbstractApi
     /**
      * Delete a sub domain for a web hosting package.
      *
-     * @param string $domainName               $domainName Domain name to delete the sub domain from
+     * @param string                           $domainName $domainName Domain name to delete the sub domain from
      * @param \HiddeCo\TransIP\Model\Subdomain $subDomain  Sub domain to delete
      *
      * @return mixed

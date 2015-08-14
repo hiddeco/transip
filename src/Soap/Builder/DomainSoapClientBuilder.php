@@ -28,7 +28,7 @@ class DomainSoapClientBuilder extends SoapClientBuilder
             'DnsEntry'          => 'HiddeCo\TransIP\Model\DnsEntry',
             'DomainBranding'    => 'HiddeCo\TransIP\Model\DomainBranding',
             'Tld'               => 'HiddeCo\TransIP\Model\Tld',
-            'DomainAction'      => 'HiddeCo\TransIP\Model\DomainAction'
+            'DomainAction'      => 'HiddeCo\TransIP\Model\DomainAction',
         ];
     }
 }

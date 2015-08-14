@@ -12,9 +12,9 @@ class Forward extends AbstractApi
     /**
      * Get a list of all domain names which have the Forward option enabled.
      *
-     * @return string[] List of all forwards enabled domains
-     *
      * @throws \SoapFault
+     *
+     * @return string[] List of all forwards enabled domains
      */
     public function getForwardDomainNames()
     {
@@ -26,9 +26,9 @@ class Forward extends AbstractApi
      *
      * @param string $forwardDomainName Domain to get the information for
      *
-     * @return \HiddeCo\TransIP\Model\Forward
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Forward
      */
     public function getInfo($forwardDomainName)
     {
@@ -40,9 +40,9 @@ class Forward extends AbstractApi
      *
      * @param \HiddeCo\TransIP\Model\Forward $forward Information about the Forward service to order.
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function order($forward)
     {
@@ -55,9 +55,9 @@ class Forward extends AbstractApi
      * @param string $forwardDomainName Domain name to cancel the Forwarding service for
      * @param string $endTime           Time to cancel the service
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancel($forwardDomainName, $endTime)
     {
@@ -70,9 +70,9 @@ class Forward extends AbstractApi
      *
      * @param \HiddeCo\TransIP\Model\Forward $forward Forward object to modify
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function modify($forward)
     {

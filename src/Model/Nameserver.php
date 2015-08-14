@@ -22,7 +22,6 @@ class Nameserver
      */
     public $ipv6;
 
-
     /**
      * @param string $hostname Hostname
      * @param string $ipv4     Ipv4 address
@@ -31,7 +30,7 @@ class Nameserver
     public function __construct($hostname, $ipv4 = '', $ipv6 = '')
     {
         $this->hostname = $hostname;
-        $this->ipv4     = $ipv4;
-        $this->ipv6     = $ipv6;
+        $this->ipv4 = $ipv4;
+        $this->ipv6 = $ipv6;
     }
 }
