@@ -42,7 +42,7 @@ class Client
      */
     protected $acceptedModes = [
         'readwrite',
-        'readonly'
+        'readonly',
     ];
 
     /**
@@ -58,10 +58,10 @@ class Client
     /**
      * Construct the TransIP client.
      *
-     * @param string     $username   TransIP username
-     * @param string     $privateKey TransIP private key
-     * @param string     $mode       Permission mode
-     * @param string     $endpoint   TransIP endpoint
+     * @param string $username   TransIP username
+     * @param string $privateKey TransIP private key
+     * @param string $mode       Permission mode
+     * @param string $endpoint   TransIP endpoint
      */
     public function __construct($username, $privateKey, $mode = 'readwrite', $endpoint = 'api.transip.nl')
     {
@@ -77,13 +77,13 @@ class Client
      *
      * @param string $name Name/alias of the API
      *
-     * @return \HiddeCo\TransIP\Api\ApiInterface
-     *
      * @throws \InvalidArgumentException
+     *
+     * @return \HiddeCo\TransIP\Api\ApiInterface
      */
     public function api($name)
     {
-        switch($name) {
+        switch ($name) {
             case 'domain':
             case 'domain_service':
             case 'domainService':
@@ -126,9 +126,9 @@ class Client
      *
      * @param string $service Name of the service to build the SOAP client for
      *
-     * @return \HiddeCo\TransIP\Soap\SoapClient
-     *
      * @throws \InvalidArgumentException
+     *
+     * @return \HiddeCo\TransIP\Soap\SoapClient
      */
     public function buildSoapClient($service)
     {
@@ -160,13 +160,13 @@ class Client
      *
      * @param string $mode Permission mode
      *
-     * @return void
-     *
      * @throws \InvalidArgumentException
+     *
+     * @return void
      */
     public function setMode($mode)
     {
-        if(!in_array($mode, $this->acceptedModes)) {
+        if (!in_array($mode, $this->acceptedModes)) {
             throw new \InvalidArgumentException(sprintf('Invalid mode: [%s]', $mode));
         }
 
@@ -198,9 +198,9 @@ class Client
      *
      * @param string $name
      *
-     * @return \HiddeCo\TransIP\Api\ApiInterface
-     *
      * @throws \InvalidArgumentException
+     *
+     * @return \HiddeCo\TransIP\Api\ApiInterface
      */
     public function __call($name, $args)
     {

@@ -25,7 +25,6 @@ interface SoapClientBuilderInterface
      */
     public function setMode($mode);
 
-
     /**
      * Set the client version.
      *
@@ -36,7 +35,7 @@ interface SoapClientBuilderInterface
     public function setClientVersion($clientVersion);
 
     /**
-     * Create a new WSDL url
+     * Create a new WSDL url.
      *
      * @param string $endpoint TransIP API endpoint
      *
@@ -50,7 +49,6 @@ interface SoapClientBuilderInterface
      * @return void
      */
     public function createSoapClient();
-
 
     /**
      * Get the soap client instance.

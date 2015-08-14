@@ -11,9 +11,9 @@ class Domain extends AbstractApi
      *
      * @param string $domainName Domain name to check for availability
      *
-     * @return string
-     *
      * @throws \SoapFault
+     *
+     * @return string
      */
     public function checkAvailability($domainName)
     {
@@ -25,9 +25,9 @@ class Domain extends AbstractApi
      *
      * @param string[] $domainNames Domain names to check for availability
      *
-     * @return \HiddeCo\TransIP\Model\DomainCheckResult[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\DomainCheckResult[]
      */
     public function batchCheckAvailability(array $domainNames)
     {
@@ -39,9 +39,9 @@ class Domain extends AbstractApi
      *
      * @param string $domainName Domain name to get the whois for
      *
-     * @return string
-     *
      * @throws \SoapFault
+     *
+     * @return string
      */
     public function getWhois($domainName)
     {
@@ -51,24 +51,23 @@ class Domain extends AbstractApi
     /**
      * Get all domain names.
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getDomainNames()
     {
         return $this->call(self::SERVICE, 'getDomainNames');
     }
 
-
     /**
      * Get information about a domain name.
      *
      * @param string $domainName Domain name to get the information for
      *
-     * @return \HiddeCo\TransIP\Model\Domain
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Domain
      */
     public function getInfo($domainName)
     {
@@ -80,24 +79,23 @@ class Domain extends AbstractApi
      *
      * @param string[] $domainNames Domain names to get the information for
      *
-     * @return \HiddeCo\TransIP\Model\Domain[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Domain[]
      */
     public function batchGetInfo(array $domainNames)
     {
         return $this->call(self::SERVICE, 'batchGetInfo', [$domainNames]);
     }
 
-
     /**
      * Register a domain name, will automatically create and sign a proposition for it.
      *
      * @param \HiddeCo\TransIP\Model\Domain $domain Domain object holding information about the domain
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function register($domain)
     {
@@ -110,9 +108,9 @@ class Domain extends AbstractApi
      * @param string $domainName Domain name that needs to be cancelled
      * @param string $endTime    Time to cancel the domain
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancel($domainName, $endTime)
     {
@@ -125,9 +123,9 @@ class Domain extends AbstractApi
      * @param \HiddeCo\TransIP\Model\Domain $domain   Domain object holding information about the domain
      * @param string                        $authCode Authorization code for domains needing this for transfer
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function transferWithOwnerChange($domain, $authCode = '')
     {
@@ -140,9 +138,9 @@ class Domain extends AbstractApi
      * @param \HiddeCo\TransIP\Model\Domain $domain   Domain object holding information about the domain
      * @param string                        $authCode Authorization code for domains needing this for transfer
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function transferWithoutOwnerChange($domain, $authCode = '')
     {
@@ -155,9 +153,9 @@ class Domain extends AbstractApi
      * @param string                              $domainName  Domain name to change the nameservers for
      * @param \HiddeCo\TransIP\Model\Nameserver[] $nameservers Array holding new Nameserver objects for this domain
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setNameservers($domainName, array $nameservers)
     {
@@ -171,9 +169,9 @@ class Domain extends AbstractApi
      * @param string                            $domainName Domain name to change the dns entries for
      * @param \HiddeCo\TransIP\Model\DnsEntry[] $dnsEntries List of new DNS entries for the given domain
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setDnsEntries($domainName, array $dnsEntries)
     {
@@ -184,14 +182,14 @@ class Domain extends AbstractApi
      * Start an owner change for a domain name, brings additional costs with the following TLDs:
      * .nl
      * .be
-     * .eu
+     * .eu.
      *
      * @param string                              $domainName   Domain name to change the owner for
      * @param \HiddeCo\TransIP\Model\WhoisContact $whoisContact New contact data for the given domain
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setOwner($domainName, $whoisContact)
     {
@@ -204,9 +202,9 @@ class Domain extends AbstractApi
      * @param string                                $domainName Domain name to change the owner for
      * @param \HiddeCo\TransIP\Model\WhoisContact[] $contacts   New contact data for the given domain
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setContacts($domainName, $contacts)
     {
@@ -218,9 +216,9 @@ class Domain extends AbstractApi
      *
      * @param string $domainName Domain name to lock
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setLock($domainName)
     {
@@ -232,9 +230,9 @@ class Domain extends AbstractApi
      *
      * @param string $domainName Domain name to unlock
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function unsetLock($domainName)
     {
@@ -244,9 +242,9 @@ class Domain extends AbstractApi
     /**
      * Get TLDs supported by TransIP.
      *
-     * @return \HiddeCo\TransIP\Model\Tld[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Tld[]
      */
     public function getAllTldInfos()
     {
@@ -258,9 +256,9 @@ class Domain extends AbstractApi
      *
      * @param string $tldName TLD to get information about
      *
-     * @return \HiddeCo\TransIP\Model\Tld
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Tld
      */
     public function getTldInfo($tldName)
     {
@@ -272,9 +270,9 @@ class Domain extends AbstractApi
      *
      * @param string $domainName Name of the domain
      *
-     * @return \HiddeCo\TransIP\Model\DomainAction
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\DomainAction
      */
     public function getCurrentDomainAction($domainName)
     {
@@ -288,15 +286,14 @@ class Domain extends AbstractApi
      *
      * @param \HiddeCo\TransIP\Model\Domain $domain Domain object with data to retry
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function retryCurrentDomainActionWithNewData($domain)
     {
         return $this->call(self::SERVICE, 'retryCurrentDomainActionWithNewData', [$domain]);
     }
-
 
     /**
      * Retry a transfer action with a new authorization code.
@@ -304,9 +301,9 @@ class Domain extends AbstractApi
      * @param \HiddeCo\TransIP\Model\Domain $domain      Domain object to try the transfer with a different code for
      * @param string                        $newAuthCode New authorization code
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function retryTransferWithDifferentAuthCode($domain, $newAuthCode)
     {
@@ -318,9 +315,9 @@ class Domain extends AbstractApi
      *
      * @param \HiddeCo\TransIP\Model\Domain $domain Domain object to cancel the action for
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancelDomainAction($domain)
     {

@@ -7,5 +7,4 @@ namespace HiddeCo\TransIP\Api;
  */
 interface ApiInterface
 {
-
 }

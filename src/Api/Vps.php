@@ -12,9 +12,9 @@ class Vps extends AbstractApi
     /**
      * Get available VPS products.
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Product[]
      */
     public function getAvailableProducts()
     {
@@ -24,9 +24,9 @@ class Vps extends AbstractApi
     /**
      * Get available VPS add-ons.
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Product[]
      */
     public function getAvailableAddons()
     {
@@ -38,9 +38,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Product[]
      */
     public function getActiveAddonsForVps($vpsName)
     {
@@ -52,24 +52,23 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Product[]
      */
     public function getAvailableUpgrades($vpsName)
     {
         return $this->call(self::SERVICE, 'getAvailableUpgrades', [$vpsName]);
     }
 
-
     /**
      * Get cancellable add-ons for a VPS.
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Product[]
      */
     public function getCancellableAddonsForVps($vpsName)
     {
@@ -84,9 +83,9 @@ class Vps extends AbstractApi
      * @param string   $operatingSystemName Name of the operating system to install
      * @param string   $hostname            Hostname for the VPS
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function orderVps($productName, array $addons, $operatingSystemName, $hostname)
     {
@@ -99,9 +98,9 @@ class Vps extends AbstractApi
      * @param string   $vpsName Name of the VPS
      * @param string[] $addons  Array with addons
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function orderAddon($vpsName, array $addons)
     {
@@ -111,9 +110,9 @@ class Vps extends AbstractApi
     /**
      * Order a private network.
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function orderPrivateNetwork()
     {
@@ -126,9 +125,9 @@ class Vps extends AbstractApi
      * @param string $vpsName              Name of the VPS
      * @param string $upgradeToProductName Name of the product to upgrade to
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function upgradeVps($vpsName, $upgradeToProductName)
     {
@@ -141,9 +140,9 @@ class Vps extends AbstractApi
      * @param string $vpsName Name of the VPS
      * @param string $endTime Time to cancel the VPS
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancelVps($vpsName, $endTime)
     {
@@ -156,9 +155,9 @@ class Vps extends AbstractApi
      * @param string $vpsName   Name of the VPS
      * @param string $addonName Name of the add-on
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancelAddon($vpsName, $addonName)
     {
@@ -171,9 +170,9 @@ class Vps extends AbstractApi
      * @param string $privateNetworkName Name of the private network
      * @param string $endTime            Time to cancel the private network
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function cancelPrivateNetwork($privateNetworkName, $endTime)
     {
@@ -185,9 +184,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return \HiddeCo\TransIP\Model\PrivateNetwork
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\PrivateNetwork
      */
     public function getPrivateNetworksByVps($vpsName)
     {
@@ -197,9 +196,9 @@ class Vps extends AbstractApi
     /**
      * Get all private networks.
      *
-     * @return \HiddeCo\TransIP\Model\PrivateNetwork[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\PrivateNetwork[]
      */
     public function getAllPrivateNetworks()
     {
@@ -212,9 +211,9 @@ class Vps extends AbstractApi
      * @param string $vpsName            Name of the VPS
      * @param string $privateNetworkName Name of the private network
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function addVpsToPrivateNetwork($vpsName, $privateNetworkName)
     {
@@ -227,9 +226,9 @@ class Vps extends AbstractApi
      * @param string $vpsName            Name of the VPS
      * @param string $privateNetworkName Name of the private network
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function removeVpsFromPrivateNetwork($vpsName, $privateNetworkName)
     {
@@ -241,9 +240,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return array
-     *
      * @throws \SoapFault
+     *
+     * @return array
      */
     public function getTrafficInformationForVps($vpsName)
     {
@@ -255,13 +254,13 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function start($vpsName)
     {
-        return $this->call(self::SERVICE. 'start', [$vpsName]);
+        return $this->call(self::SERVICE.'start', [$vpsName]);
     }
 
     /**
@@ -269,9 +268,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function stop($vpsName)
     {
@@ -283,9 +282,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function reset($vpsName)
     {
@@ -298,9 +297,9 @@ class Vps extends AbstractApi
      * @param string $vpsName     Name of the VPS
      * @param string $description Snapshot description
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function createSnapshot($vpsName, $description)
     {
@@ -313,9 +312,9 @@ class Vps extends AbstractApi
      * @param string $vpsName      Name of the VPS
      * @param string $snapshotName Name of the snapshot
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function revertSnapshot($vpsName, $snapshotName)
     {
@@ -328,9 +327,9 @@ class Vps extends AbstractApi
      * @param string $vpsName      Name of the VPS
      * @param string $snapshotName Name of the snapshot
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function removeSnapshot($vpsName, $snapshotName)
     {
@@ -342,9 +341,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return \HiddeCo\TransIP\Model\Vps
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Vps
      */
     public function getVps($vpsName)
     {
@@ -354,9 +353,9 @@ class Vps extends AbstractApi
     /**
      * Get all VPSes.
      *
-     * @return \HiddeCo\TransIP\Model\Vps[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Vps[]
      */
     public function getVpses()
     {
@@ -364,13 +363,13 @@ class Vps extends AbstractApi
     }
 
     /**
-     * Get all snapshots for a VPS
+     * Get all snapshots for a VPS.
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return \HiddeCo\TransIP\Model\Snapshot[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\Snapshot[]
      */
     public function getSnapshotsByVps($vpsName)
     {
@@ -380,9 +379,9 @@ class Vps extends AbstractApi
     /**
      * Get all operating systems.
      *
-     * @return \HiddeCo\TransIP\Model\OperatingSystem[]
-     *
      * @throws \SoapFault
+     *
+     * @return \HiddeCo\TransIP\Model\OperatingSystem[]
      */
     public function getOperatingSystems()
     {
@@ -396,9 +395,9 @@ class Vps extends AbstractApi
      * @param string $operatingSystemName Name of the operating system
      * @param string $hostname            Hostname
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function installOperatingSystem($vpsName, $operatingSystemName, $hostname)
     {
@@ -410,9 +409,9 @@ class Vps extends AbstractApi
      *
      * @param string $vpsName Name of the VPS
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getIpsForVps($vpsName)
     {
@@ -422,9 +421,9 @@ class Vps extends AbstractApi
     /**
      * Get all IP addresses.
      *
-     * @return string[]
-     *
      * @throws \SoapFault
+     *
+     * @return string[]
      */
     public function getAllIps()
     {
@@ -437,9 +436,9 @@ class Vps extends AbstractApi
      * @param string $vpsName     Name of the VPS
      * @param string $ipv6Address ipv6 address
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function addIpv6ToVps($vpsName, $ipv6Address)
     {
@@ -452,9 +451,9 @@ class Vps extends AbstractApi
      * @param string $ipAddress IP address to update, can be ipv4 or ipv6
      * @param string $ptrRecord PTR record to update to
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function updatePtrRecord($ipAddress, $ptrRecord)
     {
@@ -467,9 +466,9 @@ class Vps extends AbstractApi
      * @param string $vpsName Name of the VPS
      * @param bool   $enabled Status of the lock
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function setCustomerLock($vpsName, $enabled)
     {
@@ -482,9 +481,9 @@ class Vps extends AbstractApi
      * @param string $vpsName           Name of the VPS
      * @param string $targetAccountName TransIP username of the other user
      *
-     * @return mixed
-     *
      * @throws \SoapFault
+     *
+     * @return mixed
      */
     public function handoverVps($vpsName, $targetAccountName)
     {

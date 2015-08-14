@@ -58,10 +58,10 @@ class MailBox
         $vacationReplySubject = '',
         $vacationReplyMessage = ''
     ) {
-        $this->address              = $address;
-        $this->spamCheckerStrength  = $spamCheckerStrength;
-        $this->maxDiskUsage         = $maxDiskUsage;
-        $this->hasVacationReply     = $hasVacationReply;
+        $this->address = $address;
+        $this->spamCheckerStrength = $spamCheckerStrength;
+        $this->maxDiskUsage = $maxDiskUsage;
+        $this->hasVacationReply = $hasVacationReply;
         $this->vacationReplySubject = $vacationReplySubject;
         $this->vacationReplyMessage = $vacationReplyMessage;
     }

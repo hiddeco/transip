@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Tests\Soap;
+namespace HiddeCo\TransIP\tests\Soap;
 
 use HiddeCo\TransIP\Soap\Builder\ColocationSoapClientBuilder;
 use HiddeCo\TransIP\Soap\Builder\DomainSoapClientBuilder;
@@ -36,7 +36,7 @@ class SoapClientDirectorTest extends \PHPUnit_Framework_TestCase
             [new DomainSoapClientBuilder()],
             [new ForwardSoapClientBuilder()],
             [new VpsSoapClientBuilder()],
-            [new WebHostingSoapClientBuilder()]
+            [new WebHostingSoapClientBuilder()],
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Tests;
+namespace HiddeCo\TransIP\tests;
 
 use HiddeCo\TransIP\Client;
 
@@ -23,7 +23,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf($class, $this->client->api($apiName));
     }
-
 
     /**
      * @dataProvider apiClassesProvider
@@ -48,7 +47,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $this->client->error();
     }
-
 
     /**
      * @expectedException \InvalidArgumentException

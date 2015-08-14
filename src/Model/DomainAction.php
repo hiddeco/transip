@@ -21,5 +21,4 @@ class DomainAction
      * @var string
      */
     public $message;
-
 }

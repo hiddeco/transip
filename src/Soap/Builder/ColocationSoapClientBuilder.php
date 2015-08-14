@@ -21,7 +21,7 @@ class ColocationSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'DataCenterVisitor' => 'HiddeCo\TransIP\Model\DataCenterVisitor'
+            'DataCenterVisitor' => 'HiddeCo\TransIP\Model\DataCenterVisitor',
         ];
     }
 }

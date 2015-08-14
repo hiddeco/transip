@@ -48,7 +48,7 @@ abstract class SoapClientBuilder implements SoapClientBuilderInterface
      */
     public function createWsdl($endpoint)
     {
-        $this->wsdl = sprintf("https://%s".$this->getWsdlPath(), $endpoint);
+        $this->wsdl = sprintf('https://%s'.$this->getWsdlPath(), $endpoint);
     }
 
     /**
@@ -76,7 +76,7 @@ abstract class SoapClientBuilder implements SoapClientBuilderInterface
     abstract protected function getWsdlPath();
 
     /**
-     * Get the SOAP class map
+     * Get the SOAP class map.
      *
      * @return array
      */

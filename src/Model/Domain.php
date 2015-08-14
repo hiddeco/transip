@@ -15,17 +15,17 @@ class Domain
     /**
      * @var NameServer[]
      */
-    public $nameservers = [ ];
+    public $nameservers = [];
 
     /**
      * @var WhoisContact[]
      */
-    public $contacts = [ ];
+    public $contacts = [];
 
     /**
      * @var DnsEntry[]
      */
-    public $dnsEntries = [ ];
+    public $dnsEntries = [];
 
     /**
      * @var DomainBranding
@@ -63,12 +63,12 @@ class Domain
      * @param DnsEntry[]     $dnsEntries  Array with DNS entries
      * @param DomainBranding $branding    Branding
      */
-    public function __construct($name, $nameservers = [ ], $contacts = [ ], $dnsEntries = [ ], $branding = null)
+    public function __construct($name, $nameservers = [], $contacts = [], $dnsEntries = [], $branding = null)
     {
-        $this->name        = $name;
+        $this->name = $name;
         $this->nameservers = $nameservers;
-        $this->contacts    = $contacts;
-        $this->dnsEntries  = $dnsEntries;
-        $this->branding    = $branding;
+        $this->contacts = $contacts;
+        $this->dnsEntries = $dnsEntries;
+        $this->branding = $branding;
     }
 }

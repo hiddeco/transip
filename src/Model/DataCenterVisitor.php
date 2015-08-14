@@ -23,7 +23,7 @@ class DataCenterVisitor
     public $accessCode;
 
     /**
-     * @var boolean
+     * @var bool
      */
     public $hasBeenRegisteredBefore;
 }

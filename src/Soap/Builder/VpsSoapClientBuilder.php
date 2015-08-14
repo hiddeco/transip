@@ -25,7 +25,7 @@ class VpsSoapClientBuilder extends SoapClientBuilder
             'PrivateNetwork'    => 'HiddeCo\TransIP\Model\PrivateNetwork',
             'Vps'               => 'HiddeCo\TransIP\Model\Vps',
             'Snapshot'          => 'HiddeCo\TransIP\Model\Snapshot',
-            'OperatingSystem'   => 'HiddeCo\TransIP\Model\OperatingSystem'
+            'OperatingSystem'   => 'HiddeCo\TransIP\Model\OperatingSystem',
         ];
     }
 }
