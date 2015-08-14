@@ -260,7 +260,7 @@ class Vps extends AbstractApi
      */
     public function start($vpsName)
     {
-        return $this->call(self::SERVICE.'start', [$vpsName]);
+        return $this->call(self::SERVICE, 'start', [$vpsName]);
     }
 
     /**
