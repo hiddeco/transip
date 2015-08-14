@@ -12,6 +12,21 @@ class SoapClientDirector
     const CLIENT_VERSION = 5.1;
 
     /**
+     * @var string
+     */
+    protected $login;
+
+    /**
+     * @var string
+     */
+    protected $mode;
+
+    /**
+     * @var string
+     */
+    protected $endpoint;
+
+    /**
      * Construct the SOAP client director.
      *
      * @param string $login    TransIP login
