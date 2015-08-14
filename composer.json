@@ -1,0 +1,27 @@
+{
+  "name": "hiddeco/transip",
+  "type": "library",
+  "description": "The better TransIP API client.",
+  "keywords": ["transip", "php", "api", "soap"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hidde Beydals",
+      "email": "hello@hidde.co",
+      "homepage": "https://github.com/hiddeco"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-4": {"HiddeCo\\TransIP\\": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": {"HiddeCo\\TransIP\\Tests\\": "tests/"}
+  }
+}
