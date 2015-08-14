@@ -88,25 +88,21 @@ class Client
             case 'domain_service':
             case 'domainService':
                 return new Api\Domain($this);
-                break;
 
             case 'colocation':
             case 'colocation_service':
             case 'colocationService':
                 return new Api\Colocation($this);
-                break;
 
             case 'forward':
             case 'forward_service':
             case 'forwardService':
                 return new Api\Forward($this);
-                break;
 
             case 'vps':
             case 'vps_service':
             case 'vpsService':
                 return new Api\Vps($this);
-                break;
 
             case 'hosting':
             case 'web_hosting':
@@ -114,7 +110,6 @@ class Client
             case 'web_hosting_service':
             case 'webHostingService':
                 return new Api\WebHosting($this);
-                break;
 
             default:
                 throw new \InvalidArgumentException(sprintf('Undefined api instance called: [%s]', $name));
