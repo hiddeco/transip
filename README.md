@@ -33,8 +33,8 @@ $domainNames = $client->api('domain')->getDomainNames();
 ````
 
 #### Setting the permission mode and endpoint
-Although the permission mode and endpoint are configured by default as `readonly` and `api.transip.nl` it is possible to
-chance them according to your wishes.
+Although the permission mode and endpoint are configured by default as `readonly` and `api.transip.nl`, it is possible to
+change them according to your wishes.
 
 **Note:** accepted permission modes are `readonly` and `readwrite`. Invalid permission mode will throw an ` \InvalidArgumentException`.
 
