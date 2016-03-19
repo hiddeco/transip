@@ -9,7 +9,7 @@ use HiddeCo\TransIP\Soap\Builder\SoapClientBuilderInterface;
  */
 class SoapClientDirector
 {
-    const CLIENT_VERSION = 5.1;
+    const CLIENT_VERSION = 5.3;
 
     /**
      * @var string

@@ -405,6 +405,22 @@ class Vps extends AbstractApi
     }
 
     /**
+     * Install an operating system on a vps with a unattended installfile
+     *
+     * @param string $vpsName             The name of the VPS
+     * @param string $operatingSystemName The name of the operating to install
+     * @param string $base64InstallText   base64_encoded preseed/kickstart text
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function installOperatingSystemUnattended($vpsName, $operatingSystemName, $base64InstallText)
+    {
+        return $this->call(self::SERVICE, 'installOperatingSystemUnattended', [$vpsName, $operatingSystemName, $base64InstallText]);
+    }
+
+    /**
      * Get IP addresses for a VPS.
      *
      * @param string $vpsName Name of the VPS
