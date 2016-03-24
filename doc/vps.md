@@ -145,7 +145,7 @@ $client->vps()->revertSnapshotToOtherVps('fooVps', 'fooSnapshot', 'barVps');
 $client->vps()->removeSnapshot('fooVps', 'fooSnapshot');
 ````
 
-#### Revert a vps backup.
+#### Revert a VPS backup.
 ````php
 $client->vps()->revertVpsBackup('fooVps', 'backUpID');
 ````
