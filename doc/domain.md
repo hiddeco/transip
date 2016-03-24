@@ -1,6 +1,6 @@
 Colocation API
 ==============
-The colocation API wraps the [TransIP domain SOAP service](https://api.transip.co.uk/wsdl/?service=DomainService).
+The colocation API wraps the [TransIP domain SOAP service](https://api.transip.nl/wsdl/?service=DomainService).
 
 ### General
 The domain API is available through the `Client` and can be accessed by calling `domain()` or `api('domain')`.

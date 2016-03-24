@@ -1,6 +1,6 @@
 Web Hosting API
 ===============
-The web hosting API wraps the [TransIP web hosting SOAP service](https://api.transip.co.uk/wsdl/?service=WebhostingService).
+The web hosting API wraps the [TransIP web hosting SOAP service](https://api.transip.nl/wsdl/?service=WebhostingService).
 
 ### General
 The domain API is available through the `Client` and can be accessed by calling `hosting()` or `api('hosting')`.

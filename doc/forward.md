@@ -1,6 +1,6 @@
 Forward API
 ===========
-The forward API wraps the [TransIP forward SOAP service](https://api.transip.co.uk/wsdl/?service=ForwardService).
+The forward API wraps the [TransIP forward SOAP service](https://api.transip.nl/wsdl/?service=ForwardService).
 
 ### General
 The domain API is available through the `Client` and can be accessed by calling `forward()` or `api('forward')`.

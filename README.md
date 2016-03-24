@@ -1,7 +1,7 @@
 TransIP
 =======
-This library is an Object Oriented wrapper for the [TransIP](https://www.transip.co.uk) SOAP API (v5.1), which aims to 
-provide a better and more structured client than the official [TransIP API package](https://www.transip.co.uk/transip/api/), 
+This library is an Object Oriented wrapper for the [TransIP](https://www.transip.nl) SOAP API (v5.2), which aims to
+provide a better and more structured client than the official [TransIP API package](https://www.transip.nl/transip/api/),
 including extensive documentation.
 
 ![TransIP SOAP client](https://i.imgur.com/O4RP263.jpg)

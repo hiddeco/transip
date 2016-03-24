@@ -1,6 +1,6 @@
 Colocation API
 ==============
-The colocation API wraps the [TransIP colocation SOAP service](https://api.transip.co.uk/wsdl/?service=ColocationService).
+The colocation API wraps the [TransIP colocation SOAP service](https://api.transip.nl/wsdl/?service=ColocationService).
 
 ### General
 The colocation API is available through the `Client` and can be accessed by calling `colocation()` or `api('colocation')`.

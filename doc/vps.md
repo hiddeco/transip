@@ -1,6 +1,6 @@
 VPS API
 =======
-The VPS API wraps the [TransIP VPS SOAP service](https://api.transip.co.uk/wsdl/?service=VpsService).
+The VPS API wraps the [TransIP VPS SOAP service](https://api.transip.nl/wsdl/?service=VpsService).
 
 ### General
 The domain API is available through the `Client` and can be accessed by calling `forward()` or `api('forward')`.
