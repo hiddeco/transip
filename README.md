@@ -1,6 +1,6 @@
 TransIP
 =======
-This library is an Object Oriented wrapper for the [TransIP](https://www.transip.nl) SOAP API (v5.2), which aims to
+This library is an Object Oriented wrapper for the [TransIP](https://www.transip.nl) SOAP API (v5.3), which aims to
 provide a better and more structured client than the official [TransIP API package](https://www.transip.nl/transip/api/),
 including extensive documentation.
 
@@ -63,6 +63,10 @@ try {
 ### API documentation
 For a full documentation on the available methods foreach API and how to use them take a look at the 
 [extensive docs](https://github.com/hiddeco/transip/tree/master/doc).
+
+## Contributors
+* [Hidde Beydals](https://github.com/hiddeco) ([@hiddeco](https://twitter.com/hiddeco))
+* [Peter Steenbergen](https://github.com/petericebear) ([@petericebear](https://twitter.com/petericebear))
 
 ## License
 TransIP is licensed under [The MIT License (MIT)](https://github.com/hiddeco/transip/blob/master/LICENSE).
