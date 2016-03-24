@@ -121,7 +121,7 @@ class Domain extends AbstractApi
      * Transfer a domain name with changing the owner, not all TLDs support this (e.g. NL).
      *
      * @param \TransIP\Model\Domain $domain   Domain object holding information about the domain
-     * @param string                        $authCode Authorization code for domains needing this for transfer
+     * @param string                $authCode Authorization code for domains needing this for transfer
      *
      * @throws \SoapFault
      *
@@ -136,7 +136,7 @@ class Domain extends AbstractApi
      * Transfer a domain name without changing the owner.
      *
      * @param \TransIP\Model\Domain $domain   Domain object holding information about the domain
-     * @param string                        $authCode Authorization code for domains needing this for transfer
+     * @param string                $authCode Authorization code for domains needing this for transfer
      *
      * @throws \SoapFault
      *
@@ -150,7 +150,7 @@ class Domain extends AbstractApi
     /**
      * Start a nameserver change for a domain name, will replace all existing nameservers with new ones.
      *
-     * @param string                              $domainName  Domain name to change the nameservers for
+     * @param string                      $domainName  Domain name to change the nameservers for
      * @param \TransIP\Model\Nameserver[] $nameservers Array holding new Nameserver objects for this domain
      *
      * @throws \SoapFault
@@ -166,7 +166,7 @@ class Domain extends AbstractApi
      * Set the DNS entries for a domain name,
      * will replace all the existing DNS entries.
      *
-     * @param string                            $domainName Domain name to change the dns entries for
+     * @param string                    $domainName Domain name to change the dns entries for
      * @param \TransIP\Model\DnsEntry[] $dnsEntries List of new DNS entries for the given domain
      *
      * @throws \SoapFault
@@ -184,7 +184,7 @@ class Domain extends AbstractApi
      * .be
      * .eu.
      *
-     * @param string                              $domainName   Domain name to change the owner for
+     * @param string                      $domainName   Domain name to change the owner for
      * @param \TransIP\Model\WhoisContact $whoisContact New contact data for the given domain
      *
      * @throws \SoapFault
@@ -199,7 +199,7 @@ class Domain extends AbstractApi
     /**
      * Start a contact change for a domain name, this will replace all existing contacts.
      *
-     * @param string                                $domainName Domain name to change the owner for
+     * @param string                        $domainName Domain name to change the owner for
      * @param \TransIP\Model\WhoisContact[] $contacts   New contact data for the given domain
      *
      * @throws \SoapFault
@@ -299,7 +299,7 @@ class Domain extends AbstractApi
      * Retry a transfer action with a new authorization code.
      *
      * @param \TransIP\Model\Domain $domain      Domain object to try the transfer with a different code for
-     * @param string                        $newAuthCode New authorization code
+     * @param string                $newAuthCode New authorization code
      *
      * @throws \SoapFault
      *
