@@ -450,7 +450,7 @@ class Vps extends AbstractApi
     }
 
     /**
-     * Install an operating system on a vps with a unattended installfile.
+     * Install an operating system on a vps with a unattended install file.
      *
      * @param string $vpsName             The name of the VPS
      * @param string $operatingSystemName The name of the operating to install

@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.3 - 2016-03-24
+- New released feature in `5.3`:
+	- install an operating system unattended on a VPS
+
 ## 5.2 - 2016-03-24
 - Namespace change from `HiddeCo\TransIP` -> `TransIP`
 - Version number is from now on equal to the version number of the API (`5.2` for this release)
