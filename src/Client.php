@@ -131,20 +131,15 @@ class Client
 
         switch ($service) {
             case 'DomainService':
-                return $director->build(new Soap\Builder\DomainSoapClientBuilder());
-                break;
+                return $director->build(new Soap\Builder\DomainSoapClientBuilder);
             case 'ColocationService':
-                return $director->build(new Soap\Builder\ColocationSoapClientBuilder());
-                break;
+                return $director->build(new Soap\Builder\ColocationSoapClientBuilder);
             case 'ForwardService':
-                return $director->build(new Soap\Builder\ForwardSoapClientBuilder());
-                break;
+                return $director->build(new Soap\Builder\ForwardSoapClientBuilder);
             case 'VpsService':
-                return $director->build(new Soap\Builder\VpsSoapClientBuilder());
-                break;
+                return $director->build(new Soap\Builder\VpsSoapClientBuilder);
             case 'WebhostingService':
-                return $director->build(new Soap\Builder\WebHostingSoapClientBuilder());
-                break;
+                return $director->build(new Soap\Builder\WebHostingSoapClientBuilder);
             default:
                 throw new \InvalidArgumentException(sprintf('Undefined soap client service builder called: [%s]', $service));
         }
