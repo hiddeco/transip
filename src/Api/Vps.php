@@ -93,6 +93,20 @@ class Vps extends AbstractApi
     }
 
     /**
+     * Clone a VPS.
+     *
+     * @param string $vpsName The vps name
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function cloneVps($vpsName)
+    {
+        return $this->call(self::SERVICE, 'cloneVps', [$vpsName]);
+    }
+
+    /**
      * Order add-ons for a VPS.
      *
      * @param string   $vpsName Name of the VPS
@@ -322,6 +336,22 @@ class Vps extends AbstractApi
     }
 
     /**
+     * Revert a snapshot to another VPS.
+     *
+     * @param string $sourceVpsName      The name of the VPS where the snapshot is made
+     * @param string $snapshotName       The snapshot name
+     * @param string $destinationVpsName The name of the VPS where the snapshot should be reverted to
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function revertSnapshotToOtherVps($sourceVpsName, $snapshotName, $destinationVpsName)
+    {
+        return $this->call(self::SERVICE, 'revertSnapshotToOtherVps', [$sourceVpsName, $snapshotName, $destinationVpsName]);
+    }
+
+    /**
      * Remove a snapshot.
      *
      * @param string $vpsName      Name of the VPS
@@ -334,6 +364,21 @@ class Vps extends AbstractApi
     public function removeSnapshot($vpsName, $snapshotName)
     {
         return $this->call(self::SERVICE, 'removeSnapshot', [$vpsName, $snapshotName]);
+    }
+
+    /**
+     * Revert a vps backup.
+     *
+     * @param string $vpsName     The vps name
+     * @param int    $vpsBackupId The backup id
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function revertVpsBackup($vpsName, $vpsBackupId)
+    {
+        return $this->call(self::SERVICE, 'revertVpsBackup', [$vpsName, $vpsBackupId]);
     }
 
     /**

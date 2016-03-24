@@ -42,6 +42,11 @@ $hostname = 'baymax.foo.com';
 $client->vps()->orderVps($productName, $addons, $operatingSystemName, $hostname);
 ````
 
+#### Clone a VPS.
+````php
+$client->vps()->cloneVps('fooVps');
+````
+
 #### Order add-ons for a VPS.
 ````php
 $client->vps()->orderAddon('fooVps', 'vpsAddon-1-extra-ip-address');
@@ -127,12 +132,22 @@ $client->vps()->createSnapshot('fooVps', 'fooVpsSnapshot');
 
 #### Revert a snapshot.
 ````php
-$client->vps()->revertSnapshot('fooVps', 'fooSnapshot'):
+$client->vps()->revertSnapshot('fooVps', 'fooSnapshot');
+````
+
+#### Revert a snapshot to another VPS.
+````php
+$client->vps()->revertSnapshotToOtherVps('fooVps', 'fooSnapshot', 'barVps');
 ````
 
 #### Remove a snapshot.
 ````php
 $client->vps()->removeSnapshot('fooVps', 'fooSnapshot');
+````
+
+#### Revert a vps backup.
+````php
+$client->vps()->revertVpsBackup('fooVps', 'backUpID');
 ````
 
 #### Get a VPS.
