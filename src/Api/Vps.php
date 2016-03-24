@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Api;
+namespace TransIP\Api;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -14,7 +14,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
+     * @return \TransIP\Model\Product[]
      */
     public function getAvailableProducts()
     {
@@ -26,7 +26,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
+     * @return \TransIP\Model\Product[]
      */
     public function getAvailableAddons()
     {
@@ -40,7 +40,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
+     * @return \TransIP\Model\Product[]
      */
     public function getActiveAddonsForVps($vpsName)
     {
@@ -54,7 +54,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
+     * @return \TransIP\Model\Product[]
      */
     public function getAvailableUpgrades($vpsName)
     {
@@ -68,7 +68,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Product[]
+     * @return \TransIP\Model\Product[]
      */
     public function getCancellableAddonsForVps($vpsName)
     {
@@ -200,7 +200,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\PrivateNetwork
+     * @return \TransIP\Model\PrivateNetwork
      */
     public function getPrivateNetworksByVps($vpsName)
     {
@@ -212,7 +212,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\PrivateNetwork[]
+     * @return \TransIP\Model\PrivateNetwork[]
      */
     public function getAllPrivateNetworks()
     {
@@ -388,7 +388,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Vps
+     * @return \TransIP\Model\Vps
      */
     public function getVps($vpsName)
     {
@@ -400,7 +400,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Vps[]
+     * @return \TransIP\Model\Vps[]
      */
     public function getVpses()
     {
@@ -414,7 +414,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Snapshot[]
+     * @return \TransIP\Model\Snapshot[]
      */
     public function getSnapshotsByVps($vpsName)
     {
@@ -426,7 +426,7 @@ class Vps extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\OperatingSystem[]
+     * @return \TransIP\Model\OperatingSystem[]
      */
     public function getOperatingSystems()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap\Builder;
+namespace TransIP\Soap\Builder;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -21,13 +21,13 @@ class WebHostingSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'WebhostingPackage' => 'HiddeCo\TransIP\Model\WebHostingPackage',
-            'WebHost'           => 'HiddeCo\TransIP\Model\WebHost',
-            'Cronjob'           => 'HiddeCo\TransIP\Model\Cronjob',
-            'MailBox'           => 'HiddeCo\TransIP\Model\MailBox',
-            'Db'                => 'HiddeCo\TransIP\Model\Db',
-            'MailForward'       => 'HiddeCo\TransIP\Model\MailForward',
-            'SubDomain'         => 'HiddeCo\TransIP\Model\SubDomain',
+            'WebhostingPackage' => 'TransIP\Model\WebHostingPackage',
+            'WebHost'           => 'TransIP\Model\WebHost',
+            'Cronjob'           => 'TransIP\Model\Cronjob',
+            'MailBox'           => 'TransIP\Model\MailBox',
+            'Db'                => 'TransIP\Model\Db',
+            'MailForward'       => 'TransIP\Model\MailForward',
+            'SubDomain'         => 'TransIP\Model\SubDomain',
         ];
     }
 }

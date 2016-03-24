@@ -1,8 +1,8 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap\Builder;
+namespace TransIP\Soap\Builder;
 
-use HiddeCo\TransIP\Soap\SoapClientFactory;
+use TransIP\Soap\SoapClientFactory;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -10,7 +10,7 @@ use HiddeCo\TransIP\Soap\SoapClientFactory;
 abstract class SoapClientBuilder implements SoapClientBuilderInterface
 {
     /**
-     * @var \HiddeCo\TransIP\Soap\SoapClient
+     * @var \TransIP\Soap\SoapClient
      */
     protected $soapClient;
 

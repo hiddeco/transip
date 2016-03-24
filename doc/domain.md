@@ -49,7 +49,7 @@ $client->domain()->batchGetInfo($domainNames);
 
 #### Register a domain name with default settings.
 ````php
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com');
+$domain = new TransIP\Model\Domain('foo.com');
 
 $client->domain()->register($domain);
 ````
@@ -57,7 +57,7 @@ $client->domain()->register($domain);
 #### Register a domain with custom settings.
 ````php
 // create Nameserver objects
-$nameServers[] = new HiddeCo\TransIP\Model\Nameserver('ns1.foobar.com');
+$nameServers[] = new TransIP\Model\Nameserver('ns1.foobar.com');
 // ..
 
 // create WHOIS contact objects for each WHOIS type
@@ -68,7 +68,7 @@ $whoisTypes = [
 ];
 
 foreach($whoisTypes as $whoisType) {
-	$contact = new HiddeCo\TransIP\Model\WhoisContact();
+	$contact = new TransIP\Model\WhoisContact();
 	$contact->type 			= $whoisType;
 	$contact->firstName 	= 'Foo',
 	$contact->lastName 		= 'Bar',
@@ -84,14 +84,14 @@ foreach($whoisTypes as $whoisType) {
 }
 
 // create DNS entry objects
-$dnsEntries[] = new HiddeCo\TransIP\Model\DnsEntry('@', 86400, \TransIP\Model\DnsEntry::TYPE_A, '127.0.0.1');
+$dnsEntries[] = new TransIP\Model\DnsEntry('@', 86400, \TransIP\Model\DnsEntry::TYPE_A, '127.0.0.1');
 // ..
 
 // create Domain object with created objects from above
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com', $nameServers, $whoisContacts, $dnsEntries);
+$domain = new TransIP\Model\Domain('foo.com', $nameServers, $whoisContacts, $dnsEntries);
 
 // note: it is possible to leave out one of the optional parameters by setting the value to null
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com', null, $whoisContacts);
+$domain = new TransIP\Model\Domain('foo.com', null, $whoisContacts);
 
 $client->domain()->register($domain);
 ````
@@ -115,7 +115,7 @@ $whoisTypes = [
 ];
 
 foreach($whoisTypes as $whoisType) {
-	$contact = new HiddeCo\TransIP\Model\WhoisContact();
+	$contact = new TransIP\Model\WhoisContact();
 	$contact->type 			= $whoisType;
 	$contact->firstName 	= 'Foo',
 	$contact->lastName 		= 'Bar',
@@ -130,7 +130,7 @@ foreach($whoisTypes as $whoisType) {
 	$whoisContacts[] = $contact;
 }
 
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com', null, $whoisContacts);
+$domain = new TransIP\Model\Domain('foo.com', null, $whoisContacts);
 
 $client->domain()->transferWithOwnerChange($domain);
 
@@ -146,7 +146,7 @@ $domainName = 'foo.com';
 $tldName = strstr($domainName, '.');
 $authCode = 'authorizationCode';
 
-$domain = new HiddeCo\TransIP\Model\Domain($domainName);
+$domain = new TransIP\Model\Domain($domainName);
 
 $tldInfo = $client->domain()->getTldInfo($tldName);
 
@@ -171,7 +171,7 @@ if(in_array(\TransIP\Model\Tld::CAPABILITY_CANTRANSFERWITHOWNERCHANGE, $tldInfo-
 #### Start a nameserver change for a domain name.
 **Note**: This will replace all existing nameservers with new ones.
 ````php
-$nameServers[] = new HiddeCo\TransIP\Model\Nameserver('ns1.foobar.com');
+$nameServers[] = new TransIP\Model\Nameserver('ns1.foobar.com');
 // ..
 
 $client->domain()->setNameservers('foo.com', $nameServers);
@@ -180,7 +180,7 @@ $client->domain()->setNameservers('foo.com', $nameServers);
 #### Set the DNS entries for a domain name.
 **Note**: This will replace all existing DNS entries with new ones.
 ````php
-$dnsEntries[] = new HiddeCo\TransIP\Model\DnsEntry('@', 86400, \TransIP\Model\DnsEntry::TYPE_A, '127.0.0.1');
+$dnsEntries[] = new TransIP\Model\DnsEntry('@', 86400, \TransIP\Model\DnsEntry::TYPE_A, '127.0.0.1');
 // ..
 
 $client->domain()->setDnsEntries('foo.com', $dnsEntries);
@@ -188,7 +188,7 @@ $client->domain()->setDnsEntries('foo.com', $dnsEntries);
 
 #### Start an owner change for a domain name.
 ````php
-$whoisContact = new HiddeCo\TransIP\Model\WhoisContact();
+$whoisContact = new TransIP\Model\WhoisContact();
 $whoisContact->type 		= \TransIP\Model\WhoisContact:TYPE_REGISTRANT;
 $whoisContact->firstName 	= 'Foo',
 $whoisContact->lastName 	= 'Bar',
@@ -212,7 +212,7 @@ $whoisTypes = [
 ];
 
 foreach($whoisTypes as $whoisType) {
-	$contact = new HiddeCo\TransIP\Model\WhoisContact();
+	$contact = new TransIP\Model\WhoisContact();
 	$contact->type 			= $whoisType;
 	$contact->firstName 	= 'Foo',
 	$contact->lastName 		= 'Bar',
@@ -257,7 +257,7 @@ $client->domain()->getCurrentDomainAction('foo.com');
 
 #### Retry a failed domain action with new data.
 ````php
-$whoisContact = new HiddeCo\TransIP\Model\WhoisContact();
+$whoisContact = new TransIP\Model\WhoisContact();
 $whoisContact->type 		= \TransIP\Model\WhoisContact:TYPE_REGISTRANT;
 $whoisContact->firstName 	= 'Foo',
 $whoisContact->lastName 	= 'Bar',
@@ -270,21 +270,21 @@ $whoisContact->email		= 'foo@bar.com',
 $whoisContact->country		= 'US';
 
 // set a field to null to not change the data
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com', null, [$whoisContact]);
+$domain = new TransIP\Model\Domain('foo.com', null, [$whoisContact]);
 
 $client->domain()->retryCurrentDomainActionWithNewData($domain);
 ````
 
 #### Retry a transfer action with a new authorization code.
 ````php
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com');
+$domain = new TransIP\Model\Domain('foo.com');
 
 $client->domain()->retryTransferWithDifferentAuthCode($domain, 'newAuthorizationCode');
 ````
 
 #### Cancel a failed domain action.
 ````php
-$domain = new HiddeCo\TransIP\Model\Domain('foo.com');
+$domain = new TransIP\Model\Domain('foo.com');
 
 $client->domain()->cancelDomainAction($domain);
 ````

@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Api;
+namespace TransIP\Api;
 
 class Domain extends AbstractApi
 {
@@ -27,7 +27,7 @@ class Domain extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\DomainCheckResult[]
+     * @return \TransIP\Model\DomainCheckResult[]
      */
     public function batchCheckAvailability(array $domainNames)
     {
@@ -67,7 +67,7 @@ class Domain extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Domain
+     * @return \TransIP\Model\Domain
      */
     public function getInfo($domainName)
     {
@@ -81,7 +81,7 @@ class Domain extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Domain[]
+     * @return \TransIP\Model\Domain[]
      */
     public function batchGetInfo(array $domainNames)
     {
@@ -91,7 +91,7 @@ class Domain extends AbstractApi
     /**
      * Register a domain name, will automatically create and sign a proposition for it.
      *
-     * @param \HiddeCo\TransIP\Model\Domain $domain Domain object holding information about the domain
+     * @param \TransIP\Model\Domain $domain Domain object holding information about the domain
      *
      * @throws \SoapFault
      *
@@ -120,7 +120,7 @@ class Domain extends AbstractApi
     /**
      * Transfer a domain name with changing the owner, not all TLDs support this (e.g. NL).
      *
-     * @param \HiddeCo\TransIP\Model\Domain $domain   Domain object holding information about the domain
+     * @param \TransIP\Model\Domain $domain   Domain object holding information about the domain
      * @param string                        $authCode Authorization code for domains needing this for transfer
      *
      * @throws \SoapFault
@@ -135,7 +135,7 @@ class Domain extends AbstractApi
     /**
      * Transfer a domain name without changing the owner.
      *
-     * @param \HiddeCo\TransIP\Model\Domain $domain   Domain object holding information about the domain
+     * @param \TransIP\Model\Domain $domain   Domain object holding information about the domain
      * @param string                        $authCode Authorization code for domains needing this for transfer
      *
      * @throws \SoapFault
@@ -151,7 +151,7 @@ class Domain extends AbstractApi
      * Start a nameserver change for a domain name, will replace all existing nameservers with new ones.
      *
      * @param string                              $domainName  Domain name to change the nameservers for
-     * @param \HiddeCo\TransIP\Model\Nameserver[] $nameservers Array holding new Nameserver objects for this domain
+     * @param \TransIP\Model\Nameserver[] $nameservers Array holding new Nameserver objects for this domain
      *
      * @throws \SoapFault
      *
@@ -167,7 +167,7 @@ class Domain extends AbstractApi
      * will replace all the existing DNS entries.
      *
      * @param string                            $domainName Domain name to change the dns entries for
-     * @param \HiddeCo\TransIP\Model\DnsEntry[] $dnsEntries List of new DNS entries for the given domain
+     * @param \TransIP\Model\DnsEntry[] $dnsEntries List of new DNS entries for the given domain
      *
      * @throws \SoapFault
      *
@@ -185,7 +185,7 @@ class Domain extends AbstractApi
      * .eu.
      *
      * @param string                              $domainName   Domain name to change the owner for
-     * @param \HiddeCo\TransIP\Model\WhoisContact $whoisContact New contact data for the given domain
+     * @param \TransIP\Model\WhoisContact $whoisContact New contact data for the given domain
      *
      * @throws \SoapFault
      *
@@ -200,7 +200,7 @@ class Domain extends AbstractApi
      * Start a contact change for a domain name, this will replace all existing contacts.
      *
      * @param string                                $domainName Domain name to change the owner for
-     * @param \HiddeCo\TransIP\Model\WhoisContact[] $contacts   New contact data for the given domain
+     * @param \TransIP\Model\WhoisContact[] $contacts   New contact data for the given domain
      *
      * @throws \SoapFault
      *
@@ -244,7 +244,7 @@ class Domain extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Tld[]
+     * @return \TransIP\Model\Tld[]
      */
     public function getAllTldInfos()
     {
@@ -258,7 +258,7 @@ class Domain extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Tld
+     * @return \TransIP\Model\Tld
      */
     public function getTldInfo($tldName)
     {
@@ -272,7 +272,7 @@ class Domain extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\DomainAction
+     * @return \TransIP\Model\DomainAction
      */
     public function getCurrentDomainAction($domainName)
     {
@@ -284,7 +284,7 @@ class Domain extends AbstractApi
      * the name of the Domain, the 'nameserver', 'contacts', 'dnsEntries' fields contain the new data
      * for this domain. Set a field to null to not change the data.
      *
-     * @param \HiddeCo\TransIP\Model\Domain $domain Domain object with data to retry
+     * @param \TransIP\Model\Domain $domain Domain object with data to retry
      *
      * @throws \SoapFault
      *
@@ -298,7 +298,7 @@ class Domain extends AbstractApi
     /**
      * Retry a transfer action with a new authorization code.
      *
-     * @param \HiddeCo\TransIP\Model\Domain $domain      Domain object to try the transfer with a different code for
+     * @param \TransIP\Model\Domain $domain      Domain object to try the transfer with a different code for
      * @param string                        $newAuthCode New authorization code
      *
      * @throws \SoapFault
@@ -313,7 +313,7 @@ class Domain extends AbstractApi
     /**
      * Cancel a failed Domain action.
      *
-     * @param \HiddeCo\TransIP\Model\Domain $domain Domain object to cancel the action for
+     * @param \TransIP\Model\Domain $domain Domain object to cancel the action for
      *
      * @throws \SoapFault
      *

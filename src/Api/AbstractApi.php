@@ -1,8 +1,8 @@
 <?php
 
-namespace HiddeCo\TransIP\Api;
+namespace TransIP\Api;
 
-use HiddeCo\TransIP\Client;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -10,7 +10,7 @@ use HiddeCo\TransIP\Client;
 abstract class AbstractApi implements ApiInterface
 {
     /**
-     * @var \HiddeCo\TransIP\Client
+     * @var \TransIP\Client
      */
     protected $client;
 
@@ -43,7 +43,7 @@ abstract class AbstractApi implements ApiInterface
      * @param string $method     Method used for the call
      * @param array  $parameters Parameters used for the call
      *
-     * @return \HiddeCo\TransIP\Soap\SoapClient
+     * @return \TransIP\Soap\SoapClient
      */
     private function getSoapClient($service, $method, array $parameters)
     {

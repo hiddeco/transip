@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap\Builder;
+namespace TransIP\Soap\Builder;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -21,7 +21,7 @@ class ForwardSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'Forward' => 'HiddeCo\TransIP\Model\Forward',
+            'Forward' => 'TransIP\Model\Forward',
         ];
     }
 }

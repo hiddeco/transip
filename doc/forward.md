@@ -20,7 +20,7 @@ $client->forward()->getInfo('foo.com');
 #### Order the Forward service for a domain name.
 ````php
 // create Forward object
-$forward = new HiddeCo\TransIP\Model\Forward('foo.com', 'http://bar.com');
+$forward = new TransIP\Model\Forward('foo.com', 'http://bar.com');
 $forward->forwardEmailTo = 'foo@bar.com';
 
 $client->forward()->order($forward);
@@ -38,7 +38,7 @@ $client->forward()->cancel('foo.com', 'end');
 #### Modify the options of a Forward service.
 ````php
 // create Forward object with changed fields only
-$forward = new HiddeCo\TransIP\Model\Forward('foo.com', 'http://foobar.com');
+$forward = new TransIP\Model\Forward('foo.com', 'http://foobar.com');
 
 $client->forward()->modify($forward);
 ````

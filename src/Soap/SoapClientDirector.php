@@ -1,8 +1,8 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap;
+namespace TransIP\Soap;
 
-use HiddeCo\TransIP\Soap\Builder\SoapClientBuilderInterface;
+use TransIP\Soap\Builder\SoapClientBuilderInterface;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>

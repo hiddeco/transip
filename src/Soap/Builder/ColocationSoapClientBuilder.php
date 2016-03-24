@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap\Builder;
+namespace TransIP\Soap\Builder;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -21,7 +21,7 @@ class ColocationSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'DataCenterVisitor' => 'HiddeCo\TransIP\Model\DataCenterVisitor',
+            'DataCenterVisitor' => 'TransIP\Model\DataCenterVisitor',
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Model;
+namespace TransIP\Model;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -13,27 +13,27 @@ class Webhost
     public $domainName;
 
     /**
-     * @var \HiddeCo\TransIP\Model\Cronjob[]
+     * @var \TransIP\Model\Cronjob[]
      */
     public $cronjobs;
 
     /**
-     * @var \HiddeCo\TransIP\Model\MailBox[]
+     * @var \TransIP\Model\MailBox[]
      */
     public $mailBoxes;
 
     /**
-     * @var \HiddeCo\TransIP\Model\Db[]
+     * @var \TransIP\Model\Db[]
      */
     public $dbs;
 
     /**
-     * @var \HiddeCo\TransIP\Model\MailForward[]
+     * @var \TransIP\Model\MailForward[]
      */
     public $mailForwards;
 
     /**
-     * @var \HiddeCo\TransIP\Model\SubDomain[]
+     * @var \TransIP\Model\SubDomain[]
      */
     public $subDomains;
 }

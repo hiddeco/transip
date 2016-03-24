@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Api;
+namespace TransIP\Api;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -26,7 +26,7 @@ class WebHosting extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\WebHostingPackage[]
+     * @return \TransIP\Model\WebHostingPackage[]
      */
     public function getAvailablePackages()
     {
@@ -45,7 +45,7 @@ class WebHosting extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\WebHost
+     * @return \TransIP\Model\WebHost
      */
     public function getInfo($domainName)
     {
@@ -56,7 +56,7 @@ class WebHosting extends AbstractApi
      * Order web hosting for a domain name.
      *
      * @param string                                   $domainName        Domain name to order web hosting for
-     * @param \HiddeCo\TransIP\Model\WebHostingPackage $webHostingPackage Web hosting package to order
+     * @param \TransIP\Model\WebHostingPackage $webHostingPackage Web hosting package to order
      *
      * @throws \SoapFault
      *
@@ -74,7 +74,7 @@ class WebHosting extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\WebHostingPackage[]
+     * @return \TransIP\Model\WebHostingPackage[]
      */
     public function getAvailableUpgrades($domainName)
     {
@@ -130,7 +130,7 @@ class WebHosting extends AbstractApi
      * Create a cronjob for a web hosting package.
      *
      * @param string                         $domainName Domain name to create the cronjob for
-     * @param \HiddeCo\TransIP\Model\Cronjob $cronjob    Cronjob to create
+     * @param \TransIP\Model\Cronjob $cronjob    Cronjob to create
      *
      * @throws \SoapFault
      *
@@ -146,7 +146,7 @@ class WebHosting extends AbstractApi
      * All completely matching cronjobs will be removed.
      *
      * @param string                         $domainName Domain name to create the cronjob for
-     * @param \HiddeCo\TransIP\Model\Cronjob $cronjob    Cronjob to create
+     * @param \TransIP\Model\Cronjob $cronjob    Cronjob to create
      *
      * @throws \SoapFault
      *
@@ -162,7 +162,7 @@ class WebHosting extends AbstractApi
      * The address field of the mail box object has to be unique.
      *
      * @param string                         $domainName Domain name to create the mail box for
-     * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to create
+     * @param \TransIP\Model\MailBox $mailBox    Mail box to create
      *
      * @throws \SoapFault
      *
@@ -177,7 +177,7 @@ class WebHosting extends AbstractApi
      * Modify the mail box settings for a web hosting package.
      *
      * @param string                         $domainName Domain name to modify the mail box for
-     * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to modify
+     * @param \TransIP\Model\MailBox $mailBox    Mail box to modify
      *
      * @throws \SoapFault
      *
@@ -192,7 +192,7 @@ class WebHosting extends AbstractApi
      * Set a new password for a mail box from a web hosting package.
      *
      * @param string                         $domainName Domain name to set the mail box password for
-     * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to set the password for
+     * @param \TransIP\Model\MailBox $mailBox    Mail box to set the password for
      * @param string                         $password   New password for the mail box
      *
      * @throws \SoapFault
@@ -208,7 +208,7 @@ class WebHosting extends AbstractApi
      * Delete a mail box from a web hosting package.
      *
      * @param string                         $domainName Domain name to remove the mail box from
-     * @param \HiddeCo\TransIP\Model\MailBox $mailBox    Mail box to remove
+     * @param \TransIP\Model\MailBox $mailBox    Mail box to remove
      *
      * @throws \SoapFault
      *
@@ -223,7 +223,7 @@ class WebHosting extends AbstractApi
      * Create a mail forward for a web hosting package.
      *
      * @param string                             $domainName  Domain name to create the mail forward for
-     * @param \HiddeCo\TransIP\Model\MailForward $mailForward Mail forward to create
+     * @param \TransIP\Model\MailForward $mailForward Mail forward to create
      *
      * @throws \SoapFault
      *
@@ -238,7 +238,7 @@ class WebHosting extends AbstractApi
      * Modify a mail forward from a web hosting package.
      *
      * @param string                             $domainName  Domain name to modify the mail forward from
-     * @param \HiddeCo\TransIP\Model\MailForward $mailForward Mail forward to modify
+     * @param \TransIP\Model\MailForward $mailForward Mail forward to modify
      *
      * @throws \SoapFault
      *
@@ -253,7 +253,7 @@ class WebHosting extends AbstractApi
      * Delete a mail forward from a web hosting package.
      *
      * @param string                             $domainName  Domain name to delete the mail forward from
-     * @param \HiddeCo\TransIP\Model\MailForward $mailForward Mail forward to delete
+     * @param \TransIP\Model\MailForward $mailForward Mail forward to delete
      *
      * @throws \SoapFault
      *
@@ -268,7 +268,7 @@ class WebHosting extends AbstractApi
      * Create a new database for a web hosting package.
      *
      * @param string                    $domainName Domain name to create the database for
-     * @param \HiddeCo\TransIP\Model\Db $database   Database to create
+     * @param \TransIP\Model\Db $database   Database to create
      *
      * @throws \SoapFault
      *
@@ -283,7 +283,7 @@ class WebHosting extends AbstractApi
      * Modify a database from a web hosting package.
      *
      * @param string                    $domainName Domain name to modify the database from
-     * @param \HiddeCo\TransIP\Model\Db $database   Database to modify
+     * @param \TransIP\Model\Db $database   Database to modify
      *
      * @throws \SoapFault
      *
@@ -298,7 +298,7 @@ class WebHosting extends AbstractApi
      * Set a password for a database from a web hosting package.
      *
      * @param string                    $domainName Domain name to set the database password for
-     * @param \HiddeCo\TransIP\Model\Db $database   Database to set the password for
+     * @param \TransIP\Model\Db $database   Database to set the password for
      * @param string                    $password   Password to set
      *
      * @throws \SoapFault
@@ -329,7 +329,7 @@ class WebHosting extends AbstractApi
      * Create a sub domain for a web hosting package.
      *
      * @param string                           $domainName $domainName Domain name to create the sub domain for
-     * @param \HiddeCo\TransIP\Model\SubDomain $subDomain  Sub domain to create
+     * @param \TransIP\Model\SubDomain $subDomain  Sub domain to create
      *
      * @throws \SoapFault
      *
@@ -344,7 +344,7 @@ class WebHosting extends AbstractApi
      * Delete a sub domain for a web hosting package.
      *
      * @param string                           $domainName $domainName Domain name to delete the sub domain from
-     * @param \HiddeCo\TransIP\Model\Subdomain $subDomain  Sub domain to delete
+     * @param \TransIP\Model\Subdomain $subDomain  Sub domain to delete
      *
      * @return mixed
      *

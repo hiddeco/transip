@@ -1,8 +1,8 @@
 <?php
 
-namespace HiddeCo\TransIP\tests;
+namespace TransIP\tests;
 
-use HiddeCo\TransIP\Client;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -59,27 +59,27 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function apiClassesProvider()
     {
         return [
-            ['colocation', 'HiddeCo\TransIP\Api\Colocation'],
-            ['colocation_service', 'HiddeCo\TransIP\Api\Colocation'],
-            ['colocationService', 'HiddeCo\TransIP\Api\Colocation'],
+            ['colocation', 'TransIP\Api\Colocation'],
+            ['colocation_service', 'TransIP\Api\Colocation'],
+            ['colocationService', 'TransIP\Api\Colocation'],
 
-            ['domain', 'HiddeCo\TransIP\Api\Domain'],
-            ['domain_service', 'HiddeCo\TransIP\Api\Domain'],
-            ['domainService', 'HiddeCo\TransIP\Api\Domain'],
+            ['domain', 'TransIP\Api\Domain'],
+            ['domain_service', 'TransIP\Api\Domain'],
+            ['domainService', 'TransIP\Api\Domain'],
 
-            ['forward', 'HiddeCo\TransIP\Api\Forward'],
-            ['forward_service', 'HiddeCo\TransIP\Api\Forward'],
-            ['forwardService', 'HiddeCo\TransIP\Api\Forward'],
+            ['forward', 'TransIP\Api\Forward'],
+            ['forward_service', 'TransIP\Api\Forward'],
+            ['forwardService', 'TransIP\Api\Forward'],
 
-            ['vps', 'HiddeCo\TransIP\Api\Vps'],
-            ['vps_service', 'HiddeCo\TransIP\Api\Vps'],
-            ['vpsService', 'HiddeCo\TransIP\Api\Vps'],
+            ['vps', 'TransIP\Api\Vps'],
+            ['vps_service', 'TransIP\Api\Vps'],
+            ['vpsService', 'TransIP\Api\Vps'],
 
-            ['hosting', 'HiddeCo\TransIP\Api\WebHosting'],
-            ['web_hosting', 'HiddeCo\TransIP\Api\WebHosting'],
-            ['webHosting', 'HiddeCo\TransIP\Api\WebHosting'],
-            ['web_hosting_service', 'HiddeCo\TransIP\Api\WebHosting'],
-            ['webHostingService', 'HiddeCo\TransIP\Api\WebHosting'],
+            ['hosting', 'TransIP\Api\WebHosting'],
+            ['web_hosting', 'TransIP\Api\WebHosting'],
+            ['webHosting', 'TransIP\Api\WebHosting'],
+            ['web_hosting_service', 'TransIP\Api\WebHosting'],
+            ['webHostingService', 'TransIP\Api\WebHosting'],
         ];
     }
 }

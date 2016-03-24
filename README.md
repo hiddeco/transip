@@ -28,7 +28,7 @@ To use this library without running in to trouble you will need PHP 5.4+ or HHVM
 // Composer autoload
 require_once 'vendor/autoload.php';
 
-$client = new \HiddeCo\TransIP\Client('username', 'privateKey');
+$client = new \TransIP\Client('username', 'privateKey');
 $domainNames = $client->api('domain')->getDomainNames();
 ````
 
@@ -39,7 +39,7 @@ change them according to your wishes.
 **Note:** accepted permission modes are `readonly` and `readwrite`. Invalid permission mode will throw an ` \InvalidArgumentException`.
 
 ````php
-$client = new \HiddeCo\TransIP\Client('username', 'privateKey', 'readwrite', 'api.transip.co.uk');
+$client = new \TransIP\Client('username', 'privateKey', 'readwrite', 'api.transip.nl');
 
 // set permission mode on the run
 try {
@@ -51,7 +51,7 @@ try {
 
 #### Catching `\SoapFault`
 ````php
-$client = new \HiddeCo\TransIP\Client('username', 'privateKey');
+$client = new \TransIP\Client('username', 'privateKey');
 
 try {
 	$client->api('domain')->getDomainNames();

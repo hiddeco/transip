@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Api;
+namespace TransIP\Api;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -28,7 +28,7 @@ class Forward extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\Forward
+     * @return \TransIP\Model\Forward
      */
     public function getInfo($forwardDomainName)
     {
@@ -38,7 +38,7 @@ class Forward extends AbstractApi
     /**
      * Order the Forward service for a domain name.
      *
-     * @param \HiddeCo\TransIP\Model\Forward $forward Information about the Forward service to order.
+     * @param \TransIP\Model\Forward $forward Information about the Forward service to order.
      *
      * @throws \SoapFault
      *
@@ -68,7 +68,7 @@ class Forward extends AbstractApi
      * Modify the options of a Forward service,
      * all fields set in the Forward object will be changed.
      *
-     * @param \HiddeCo\TransIP\Model\Forward $forward Forward object to modify
+     * @param \TransIP\Model\Forward $forward Forward object to modify
      *
      * @throws \SoapFault
      *

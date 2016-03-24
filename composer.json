@@ -19,9 +19,9 @@
     "phpunit/phpunit": "5.*"
   },
   "autoload": {
-    "psr-4": {"HiddeCo\\TransIP\\": "src/"}
+    "psr-4": {"TransIP\\": "src/"}
   },
   "autoload-dev": {
-    "psr-4": {"HiddeCo\\TransIP\\Tests\\": "tests/"}
+    "psr-4": {"TransIP\\Tests\\": "tests/"}
   }
 }

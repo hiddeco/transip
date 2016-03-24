@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap\Builder;
+namespace TransIP\Soap\Builder;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -53,7 +53,7 @@ interface SoapClientBuilderInterface
     /**
      * Get the soap client instance.
      *
-     * @return \HiddeCo\TransIP\Soap\SoapClient
+     * @return \TransIP\Soap\SoapClient
      */
     public function getSoapClient();
 }

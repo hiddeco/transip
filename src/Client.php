@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP;
+namespace TransIP;
 
 /**
  * The better TransIP SOAP client.
@@ -79,7 +79,7 @@ class Client
      *
      * @throws \InvalidArgumentException
      *
-     * @return \HiddeCo\TransIP\Api\ApiInterface
+     * @return \TransIP\Api\ApiInterface
      */
     public function api($name)
     {
@@ -123,7 +123,7 @@ class Client
      *
      * @throws \InvalidArgumentException
      *
-     * @return \HiddeCo\TransIP\Soap\SoapClient
+     * @return \TransIP\Soap\SoapClient
      */
     public function buildSoapClient($service)
     {
@@ -195,7 +195,7 @@ class Client
      *
      * @throws \InvalidArgumentException
      *
-     * @return \HiddeCo\TransIP\Api\ApiInterface
+     * @return \TransIP\Api\ApiInterface
      */
     public function __call($name, $args)
     {

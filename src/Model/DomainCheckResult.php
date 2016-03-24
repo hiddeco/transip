@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Model;
+namespace TransIP\Model;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>

@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Api;
+namespace TransIP\Api;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -19,7 +19,7 @@ class Colocation extends AbstractApi
      *
      * @throws \SoapFault
      *
-     * @return \HiddeCo\TransIP\Model\DataCenterVisitor[]
+     * @return \TransIP\Model\DataCenterVisitor[]
      */
     public function requestAccess($when, $duration, array $visitors, $phoneNumber)
     {

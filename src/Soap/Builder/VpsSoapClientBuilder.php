@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap\Builder;
+namespace TransIP\Soap\Builder;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -21,11 +21,11 @@ class VpsSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'Product'           => 'HiddeCo\TransIP\Model\Product',
-            'PrivateNetwork'    => 'HiddeCo\TransIP\Model\PrivateNetwork',
-            'Vps'               => 'HiddeCo\TransIP\Model\Vps',
-            'Snapshot'          => 'HiddeCo\TransIP\Model\Snapshot',
-            'OperatingSystem'   => 'HiddeCo\TransIP\Model\OperatingSystem',
+            'Product'           => 'TransIP\Model\Product',
+            'PrivateNetwork'    => 'TransIP\Model\PrivateNetwork',
+            'Vps'               => 'TransIP\Model\Vps',
+            'Snapshot'          => 'TransIP\Model\Snapshot',
+            'OperatingSystem'   => 'TransIP\Model\OperatingSystem',
         ];
     }
 }

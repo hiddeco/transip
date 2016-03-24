@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap;
+namespace TransIP\Soap;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>

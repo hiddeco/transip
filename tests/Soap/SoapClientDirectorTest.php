@@ -1,14 +1,14 @@
 <?php
 
-namespace HiddeCo\TransIP\tests\Soap;
+namespace TransIP\tests\Soap;
 
-use HiddeCo\TransIP\Soap\Builder\ColocationSoapClientBuilder;
-use HiddeCo\TransIP\Soap\Builder\DomainSoapClientBuilder;
-use HiddeCo\TransIP\Soap\Builder\ForwardSoapClientBuilder;
-use HiddeCo\TransIP\Soap\Builder\SoapClientBuilderInterface;
-use HiddeCo\TransIP\Soap\Builder\VpsSoapClientBuilder;
-use HiddeCo\TransIP\Soap\Builder\WebHostingSoapClientBuilder;
-use HiddeCo\TransIP\Soap\SoapClientDirector;
+use TransIP\Soap\Builder\ColocationSoapClientBuilder;
+use TransIP\Soap\Builder\DomainSoapClientBuilder;
+use TransIP\Soap\Builder\ForwardSoapClientBuilder;
+use TransIP\Soap\Builder\SoapClientBuilderInterface;
+use TransIP\Soap\Builder\VpsSoapClientBuilder;
+use TransIP\Soap\Builder\WebHostingSoapClientBuilder;
+use TransIP\Soap\SoapClientDirector;
 
 class SoapClientDirectorTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,7 +26,7 @@ class SoapClientDirectorTest extends \PHPUnit_Framework_TestCase
     {
         $soapClient = $this->director->build($builder);
 
-        $this->assertInstanceOf('HiddeCo\TransIP\Soap\SoapClient', $soapClient);
+        $this->assertInstanceOf('TransIP\Soap\SoapClient', $soapClient);
     }
 
     public function buildersProvider()

@@ -1,6 +1,6 @@
 <?php
 
-namespace HiddeCo\TransIP\Soap;
+namespace TransIP\Soap;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -13,7 +13,7 @@ class SoapClientFactory implements SoapClientFactoryInterface
      * @param string $wsdl     WSDL
      * @param array  $classMap Class map
      *
-     * @return \HiddeCo\TransIP\Soap\SoapClient
+     * @return \TransIP\Soap\SoapClient
      */
     public function make($wsdl, array $classMap = [])
     {
