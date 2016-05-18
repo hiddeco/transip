@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Transip by hiddeco</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Transip</h1>
+        <p>The better TransIP SOAP client.  Object Oriented and well documented. PHP5.4+</p>
+
+        <p class="view"><a href="https://github.com/hiddeco/transip">View the Project on GitHub <small>hiddeco/transip</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hiddeco/transip/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hiddeco/transip/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hiddeco/transip">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="transip" class="anchor" href="#transip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TransIP</h1>
+
+<p>This library is an Object Oriented wrapper for the <a href="https://www.transip.nl">TransIP</a> SOAP API (v5.3), which aims to
+provide a better and more structured client than the official <a href="https://www.transip.nl/transip/api/">TransIP API package</a>,
+including extensive documentation.</p>
+
+<p><img src="https://i.imgur.com/O4RP263.jpg" alt="TransIP SOAP client"></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To use this library without running in to trouble you will need PHP 5.4+ or HHVM 3.6+ and Composer.</p>
+
+<ol>
+<li><p>Get the latest version of TransIP by adding the following line to your <code>composer.json</code> file
+<code>"hiddeco/transip": "5.3"</code></p></li>
+<li><p>Run <code>composer update</code> or <code>composer install</code></p></li>
+</ol>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>All TransIP services and methods available through one <code>Client</code>
+</li>
+<li>Follows PSR-4 conventions and PSR-2 coding standards</li>
+<li>Extensively documented</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="basics" class="anchor" href="#basics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basics</h3>
+
+<h4>
+<a id="using-the-client" class="anchor" href="#using-the-client" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the <code>Client</code>
+</h4>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c">// Composer autoload</span></span>
+<span class="pl-s1"><span class="pl-k">require_once</span> <span class="pl-s"><span class="pl-pds">'</span>vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$client</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\TransIP\</span><span class="pl-c1">Client</span>(<span class="pl-s"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>privateKey<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-smi">$domainNames</span> <span class="pl-k">=</span> <span class="pl-smi">$client</span><span class="pl-k">-&gt;</span>api(<span class="pl-s"><span class="pl-pds">'</span>domain<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>getDomainNames();</span></pre></div>
+
+<h4>
+<a id="setting-the-permission-mode-and-endpoint" class="anchor" href="#setting-the-permission-mode-and-endpoint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting the permission mode and endpoint</h4>
+
+<p>Although the permission mode and endpoint are configured by default as <code>readonly</code> and <code>api.transip.nl</code>, it is possible to
+change them according to your wishes.</p>
+
+<p><strong>Note:</strong> accepted permission modes are <code>readonly</code> and <code>readwrite</code>. Invalid permission mode will throw an <code>\InvalidArgumentException</code>.</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-smi">$client</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\TransIP\</span><span class="pl-c1">Client</span>(<span class="pl-s"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>privateKey<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>readwrite<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>api.transip.nl<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c">// set permission mode on the run</span></span>
+<span class="pl-s1"><span class="pl-k">try</span> {</span>
+<span class="pl-s1">    <span class="pl-smi">$client</span><span class="pl-k">-&gt;</span>setMode(<span class="pl-s"><span class="pl-pds">'</span>readonly<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">} <span class="pl-k">catch</span>(<span class="pl-c1">\</span><span class="pl-c1">InvalidArgumentException</span> <span class="pl-smi">$e</span>) {</span>
+<span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-smi">$e</span><span class="pl-k">-&gt;</span>getMessage();</span>
+<span class="pl-s1">}</span></pre></div>
+
+<h4>
+<a id="catching-soapfault" class="anchor" href="#catching-soapfault" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Catching <code>\SoapFault</code>
+</h4>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-smi">$client</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\TransIP\</span><span class="pl-c1">Client</span>(<span class="pl-s"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>privateKey<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">try</span> {</span>
+<span class="pl-s1">    <span class="pl-smi">$client</span><span class="pl-k">-&gt;</span>api(<span class="pl-s"><span class="pl-pds">'</span>domain<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>getDomainNames();</span>
+<span class="pl-s1">} <span class="pl-k">catch</span>(<span class="pl-c1">\</span><span class="pl-c1">SoapFault</span> <span class="pl-smi">$e</span>) {</span>
+<span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-smi">$e</span><span class="pl-k">-&gt;</span>getMessage();</span>
+<span class="pl-s1">}</span></pre></div>
+
+<h3>
+<a id="api-documentation" class="anchor" href="#api-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API documentation</h3>
+
+<p>For a full documentation on the available methods foreach API and how to use them take a look at the 
+<a href="https://github.com/hiddeco/transip/tree/master/doc">extensive docs</a>.</p>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul>
+<li>
+<a href="https://github.com/hiddeco">Hidde Beydals</a> (<a href="https://twitter.com/hiddeco">@hiddeco</a>)</li>
+<li>
+<a href="https://github.com/petericebear">Peter Steenbergen</a> (<a href="https://twitter.com/petericebear">@petericebear</a>)</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>TransIP is licensed under <a href="https://github.com/hiddeco/transip/blob/master/LICENSE">The MIT License (MIT)</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hiddeco">hiddeco</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
