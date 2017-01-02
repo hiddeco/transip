@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.3.1 - 2017-01-02
+- Drop support for `PHP <5.6`
+
 ## 5.3 - 2016-03-24
 - New released feature in `5.3`:
 	- install an operating system unattended on a VPS
