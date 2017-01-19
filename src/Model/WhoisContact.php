@@ -314,6 +314,11 @@ class WhoisContact
     /**
      * @var string
      */
+    public $companyType;
+
+    /**
+     * @var string
+     */
     public $companyKvk;
 
     /**
