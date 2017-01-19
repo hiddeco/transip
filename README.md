@@ -9,10 +9,10 @@ including extensive documentation.
 ## Installation
 To use this library without running in to trouble you will need PHP 5.6+ or HHVM 3.6+ and Composer.
 
-1.	Get the latest version of TransIP by adding the following line to your `composer.json` file
-	`"hiddeco/transip": "5.3.*"`
+1. Get the latest version of TransIP by adding the following line to your `composer.json` file
+    `"hiddeco/transip": "5.3.*"`
 
-2.	Run `composer update` or `composer install`
+2. Run `composer update` or `composer install`
 
 ## Features
 - All TransIP services and methods available through one `Client`
@@ -43,9 +43,9 @@ $client = new \TransIP\Client('username', 'privateKey', 'readwrite', 'api.transi
 
 // set permission mode on the run
 try {
-	$client->setMode('readonly');
+    $client->setMode('readonly');
 } catch(\InvalidArgumentException $e) {
-	echo $e->getMessage();
+    echo $e->getMessage();
 }
 ````
 
@@ -54,9 +54,9 @@ try {
 $client = new \TransIP\Client('username', 'privateKey');
 
 try {
-	$client->api('domain')->getDomainNames();
+    $client->api('domain')->getDomainNames();
 } catch(\SoapFault $e) {
-	echo $e->getMessage();
+    $echo $e->getMessage();
 }
 ````
 

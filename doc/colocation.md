@@ -10,7 +10,7 @@ The colocation API is available through the `Client` and can be accessed by call
 #### Request access to the data-center.
 ````php
 $visitors = [
-	'Firstname Lastname',
+    'Firstname Lastname',
 ];
 
 $client->colocation()->requestAccess('2012-12-23 00:00:00', 60, $visitors, '+31612312399');
