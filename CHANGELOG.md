@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.3.2 - 2017-01-19
+- Fix missing `companyType` property on `WhoisContact` model (#8)
+
 ## 5.3.1 - 2017-01-02
 - Drop support for `PHP <5.6`
 
