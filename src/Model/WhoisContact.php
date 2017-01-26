@@ -314,12 +314,12 @@ class WhoisContact
     /**
      * @var string
      */
-    public $companyType;
+    public $companyKvk;
 
     /**
      * @var string
      */
-    public $companyKvk;
+    public $companyType;
 
     /**
      * @var string
