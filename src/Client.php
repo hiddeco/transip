@@ -22,6 +22,11 @@ namespace TransIP;
  * @method Api\WebHosting webHosting()
  * @method Api\WebHosting web_hosting_service()
  * @method Api\WebHosting webHostingService()
+ * @method Api\Haip       haip()
+ * @method Api\Haip       ha_ip()
+ * @method Api\Haip       ha_ip_service()
+ * @method Api\Haip       haip_service()
+ * @method Api\Haip       haipService()
  *
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -111,6 +116,13 @@ class Client
             case 'webHostingService':
                 return new Api\WebHosting($this);
 
+            case 'haip':
+            case 'ha_ip':
+            case 'ha_ip_service':
+            case 'haip_service':
+            case 'haipService':
+                return new Api\Haip($this);
+
             default:
                 throw new \InvalidArgumentException(sprintf('Undefined api instance called: [%s]', $name));
         }
@@ -140,6 +152,8 @@ class Client
                 return $director->build(new Soap\Builder\VpsSoapClientBuilder);
             case 'WebhostingService':
                 return $director->build(new Soap\Builder\WebHostingSoapClientBuilder);
+            case 'HaipService':
+                return $director->build(new Soap\Builder\HaipSoapClientBuilder);
             default:
                 throw new \InvalidArgumentException(sprintf('Undefined soap client service builder called: [%s]', $service));
         }

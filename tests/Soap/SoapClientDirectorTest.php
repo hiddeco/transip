@@ -5,6 +5,7 @@ namespace TransIP\tests\Soap;
 use TransIP\Soap\Builder\ColocationSoapClientBuilder;
 use TransIP\Soap\Builder\DomainSoapClientBuilder;
 use TransIP\Soap\Builder\ForwardSoapClientBuilder;
+use TransIP\Soap\Builder\HaipSoapClientBuilder;
 use TransIP\Soap\Builder\SoapClientBuilderInterface;
 use TransIP\Soap\Builder\VpsSoapClientBuilder;
 use TransIP\Soap\Builder\WebHostingSoapClientBuilder;
@@ -37,6 +38,7 @@ class SoapClientDirectorTest extends \PHPUnit_Framework_TestCase
             [new ForwardSoapClientBuilder()],
             [new VpsSoapClientBuilder()],
             [new WebHostingSoapClientBuilder()],
+            [new HaipSoapClientBuilder()],
         ];
     }
 }
