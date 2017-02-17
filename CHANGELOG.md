@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.4 - 2017-02-17
+- New released features in `5.4`:
+    - HA-IP service
+
 ## 5.3.3 - 2017-01-27
 - Fixed property order of `WhoisContact` model (#8)
 
