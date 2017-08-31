@@ -1,6 +1,6 @@
 TransIP
 =======
-This library is an Object Oriented wrapper for the [TransIP](https://www.transip.nl) SOAP API (v5.3), which aims to
+This library is an Object Oriented wrapper for the [TransIP](https://www.transip.nl) SOAP API (v5.5), which aims to
 provide a better and more structured client than the official [TransIP API package](https://www.transip.nl/transip/api/),
 including extensive documentation.
 
@@ -10,7 +10,7 @@ including extensive documentation.
 To use this library without running in to trouble you will need PHP 5.6+ or HHVM 3.6+ and Composer.
 
 1. Get the latest version of TransIP by adding the following line to your `composer.json` file
-    `"hiddeco/transip": "5.4.*"`
+    `"hiddeco/transip": "5.5.*"`
 
 2. Run `composer update` or `composer install`
 

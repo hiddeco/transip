@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.5 - 2017-08-31
+- New released feature in `5.5`:
+    - Additional HA-IP features
+
 ## 5.4 - 2017-02-17
 - New released features in `5.4`:
     - HA-IP service
