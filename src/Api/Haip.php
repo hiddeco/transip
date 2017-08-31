@@ -48,7 +48,7 @@ class Haip extends AbstractApi
     }
 
     /**
-     * Get all certificates by HA-IP.
+     * Get all certificates for the HA-IP.
      *
      * @param string $haipName The HA-IP name
      *
@@ -76,7 +76,7 @@ class Haip extends AbstractApi
     }
 
     /**
-     * Add a certificate to this HA-IP.
+     * Add a certificate to the HA-IP.
      *
      * @param string $haipName      The HA-IP name
      * @param int    $certificateId The certificate ID
@@ -91,7 +91,7 @@ class Haip extends AbstractApi
     }
 
     /**
-     * Remove a certificate from this HA-IP.
+     * Remove a certificate from the HA-IP.
      *
      * @param string $haipName      The HA-IP name
      * @param int    $certificateId The certificate ID
@@ -106,7 +106,7 @@ class Haip extends AbstractApi
     }
 
     /**
-     * Add LetsEncrypt certificate to HA-IP.
+     * Add a LetsEncrypt certificate to the HA-IP.
      *
      * @param string $haipName   The HA-IP name
      * @param string $commonName The common name
@@ -135,7 +135,7 @@ class Haip extends AbstractApi
     }
 
     /**
-     * Update the ptr records for the given HA-IP.
+     * Update the ptr record for the given HA-IP.
      *
      * @param string $haipName The HA-IP name
      * @param string $ptr      The ptr record
