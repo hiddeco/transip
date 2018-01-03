@@ -50,6 +50,16 @@ class Vps
     /**
      * @var string
      */
+    public $ipv6Address;
+
+    /**
+     * @var string
+     */
+    public $macAddress;
+
+    /**
+     * @var string
+     */
     public $vncHostname;
 
     /**
