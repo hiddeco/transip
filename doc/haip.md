@@ -21,6 +21,51 @@ $client->haip()->getHaips();
 ````php
 $client->haip()->changeHaipVps('ha-ip-foo', 'vps-bar');
 ````
+
+#### Replace the currently attached VPSes to the HA-IP with the provided list.
+````php
+$client->haip()->setHaipVpses('ha-ip-foo', ['vps-bar, 'vps-foo']);
+````
+
+#### Set the provided IP setup for the HA-IP.
+````php
+// the ip setup can be one of the following values
+// 'both', 'noipv6', 'ipv6to4'
+$client->haip()->setIpSetup('ha-ip-foo', 'both');
+````
+
+#### Set the provided balancing mode for the HA-IP.
+
+:warning:	HA-IP Pro feature
+
+````php
+// the balancing mode can be one of the following values
+// 'roundrobin', 'cookie', 'source'
+// the cookie name is only mandatory when the mode is set to 'cookie'
+$client->haip()->setBalancingMode('ha-ip-foo', 'cookie', 'cookie-name');
+````
+
+#### Configure the HTTP health check for the HA-IP.
+
+:warning:	HA-IP Pro feature
+
+````php
+$client->haip()->setHttpHealthCheck('ha-ip-foo', '/path', 80);
+````
+
+#### Configure a TCP health check for the HA-IP.
+
+:warning:	HA-IP Pro feature
+
+````php
+$client->haip()->setTcpHealthCheck('ha-ip-foo');
+````
+
+#### Get a status report for the HA-IP.
+````php
+$client->haip()->getStatusReport('ha-ip-foo');
+````
+
 #### Get all certificates for the HA-IP.
 ````php
 $client->haip()->getCertificatesByHaip('ha-ip-foo');
@@ -62,7 +107,7 @@ $client->haip()->setHaipDescription('ha-ip-foo', 'description');
 
 #### Get all port configurations for the HA-IP.
 ````php
-$client->haip()->getHaipPortConfigurations('ha-ip-foo');
+$client->haip()->getPortConfigurations('ha-ip-foo');
 ````
 
 #### Set the default port configuration for the HA-IP.
@@ -72,19 +117,21 @@ $client->haip()->setDefaultPortConfiguration('ha-ip-foo');
 
 #### Add port configuration to the HA-IP.
 ````php
-// the last ($node) parameter can receive one of the following values
+// the $node parameter can receive one of the following values
 // 'tcp','http','https', or 'proxy'
-$client->haip()->addHaipPortConfiguration('ha-ip-foo', 'ssl', 443, 'https');
+// the $endPointSslMode can receive on of the following values
+// 'off, 'on' strict'
+$client->haip()->addPortConfiguration('ha-ip-foo', 'ssl', 443, 'https', 'on');
 ````
 
 #### Update port configuration for the HA-IP.
 ````php
-$client->haip()->updateHaipPortConfiguration('ha-ip-foo', 'ssl', 443, 'https');
+$client->haip()->updatePortConfiguration('ha-ip-foo', 123, 'ssl', 443, 'https', 'on');
 ````
 
 #### Delete the port configuration for the HA-IP.
 ````php
-$client->haip()->deleteHaipPortConfiguration('ha-ip-foo', 123);
+$client->haip()->deletePortConfiguration('ha-ip-foo', 123);
 ````
 
 #### Cancel the HA-IP.

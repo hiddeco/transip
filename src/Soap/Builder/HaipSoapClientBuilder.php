@@ -3,6 +3,7 @@
 namespace TransIP\Soap\Builder;
 
 use TransIP\Model\Haip;
+use TransIP\Model\Vps;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -24,6 +25,7 @@ class HaipSoapClientBuilder extends SoapClientBuilder
     {
         return [
             'Haip' => Haip::class,
+            'Vps'  => Vps::class,
         ];
     }
 }

@@ -48,6 +48,104 @@ class Haip extends AbstractApi
     }
 
     /**
+     * Replaces the currently attached VPSes to the HA-IP with the provided list.
+     *
+     * @param string   $haipName The HA-IP name
+     * @param string[] $vpsNames The VPS names
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function setHaipVpses($haipName, $vpsNames)
+    {
+        return $this->call(self::SERVICE, 'setHaipVpses', [$haipName, $vpsNames]);
+    }
+
+    /**
+     * Sets the provided IP setup for the HA-IP.
+     *
+     * @param string $haipName The HA-IP name
+     * @param string $ipSetup  ('both', 'noipv6', 'ipv6to4')
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function setIpSetup($haipName, $ipSetup)
+    {
+        return $this->call(self::SERVICE, 'setIpSetup', [$haipName, $ipSetup]);
+    }
+
+    /**
+     * Sets the provided balancing mode for the HA-IP.
+     *
+     * The cookie name is expected to be an empty string unless the balancing mode is set to 'cookie'.
+     *
+     * HA-IP Pro feature.
+     *
+     * @param string $haipName      The HA-IP name
+     * @param string $balancingMode ('roundrobin', 'cookie', 'source')
+     * @param string $cookieName    The cookie name that pins the session if the balancing mode is 'cookie'
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function setBalancingMode($haipName, $balancingMode, $cookieName = '')
+    {
+        return $this->call(self::SERVICE, 'setBalancingMode', [$haipName, $balancingMode, $cookieName]);
+    }
+
+    /**
+     * Configures the HTTP health check for the HA-IP. To disable use Haip::setTcpHealthCheck.
+     *
+     * HA-IP Pro feature.
+     *
+     * @param string $haipName  The HA-IP name
+     * @param string $path      The path that will be accessed when performing health checks
+     * @param int    $port      The port that will be used when performing health checks
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function setHttpHealthCheck($haipName, $path, $port)
+    {
+        return $this->call(self::SERVICE, 'setHttpHealthCheck', [$haipName, $path, $port]);
+    }
+
+    /**
+     * Configures a TCP health check for the HA-IP. This is the default health check.
+     *
+     * HA-IP Pro feature.
+     *
+     * @param string $haipName The HA-IP name
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function setTcpHealthCheck($haipName)
+    {
+        return $this->call(self::SERVICE, 'setTcpHealthCheck', [$haipName]);
+    }
+
+    /**
+     * Get a status report for the HA-IP.
+     *
+     * @param string $haipName The HA-IP name
+     *
+     * @throws \SoapFault
+     *
+     * @return array
+     */
+    public function getStatusReport($haipName)
+    {
+        return $this->call(self::SERVICE, 'getStatusReport', [$haipName]);
+    }
+
+    /**
      * Get all certificates for the HA-IP.
      *
      * @param string $haipName The HA-IP name
@@ -169,6 +267,9 @@ class Haip extends AbstractApi
      *
      * @param string $haipName The HA-IP name
      *
+     * @deprecated 5.6
+     * @see Haip::getPortConfigurations()
+     *
      * @throws \SoapFault
      *
      * @return mixed
@@ -176,6 +277,20 @@ class Haip extends AbstractApi
     public function getHaipPortConfigurations($haipName)
     {
         return $this->call(self::SERVICE, 'getHaipPortConfigurations', [$haipName]);
+    }
+
+    /**
+     * Get all port configurations for the HA-IP.
+     *
+     * @param string $haipName The HA-IP name
+     *
+     * @throws \SoapFault
+     *
+     * @return array
+     */
+    public function getPortConfigurations($haipName)
+    {
+        return $this->call(self::SERVICE, 'getPortConfigurations', [$haipName]);
     }
 
     /**
@@ -200,6 +315,9 @@ class Haip extends AbstractApi
      * @param int    $portNumber The port number
      * @param string $mode       ('tcp','http','https','proxy')
      *
+     * @deprecated 5.6
+     * @see Haip::addPortConfiguration()
+     *
      * @throws \SoapFault
      *
      * @return mixed
@@ -210,6 +328,29 @@ class Haip extends AbstractApi
     }
 
     /**
+     * Add port configuration to the HA-IP.
+     *
+     * @param string $haipName        The HA-IP name
+     * @param string $name            The name describing the port configuration
+     * @param int    $sourcePort      The port that is addressed on the HA-IP
+     * @param int    $targetPort      The port that is addressed on the VPS
+     * @param string $mode            ('tcp', 'http', 'https', 'proxy')
+     * @param string $endpointSslMode ('off, 'on' strict')
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function addPortConfiguration($haipName, $name, $sourcePort, $targetPort, $mode, $endpointSslMode)
+    {
+        $this->call(
+            self::SERVICE,
+            'addPortConfiguration',
+            [$haipName, $name, $sourcePort, $targetPort, $mode, $endpointSslMode]
+        );
+    }
+
+    /**
      * Update port configuration for the HA-IP.
      *
      * @param string $haipName        The HA-IP name
@@ -217,6 +358,9 @@ class Haip extends AbstractApi
      * @param string $name            The port name
      * @param int    $portNumber      The port number
      * @param string $mode            ('tcp','http','https','proxy')
+     *
+     * @deprecated 5.6
+     * @see Haip::updatePortConfiguration()
      *
      * @throws \SoapFault
      *
@@ -232,10 +376,44 @@ class Haip extends AbstractApi
     }
 
     /**
+     * Update port configuration for the HA-IP.
+     *
+     * @param string $haipName         The HA-IP name
+     * @param int    $configurationId  The configuration ID
+     * @param string $name             The name describing the port configuration
+     * @param int    $sourcePort       The port that is addressed on the HA-IP
+     * @param int    $targetPort       The port that is addressed on the VPS
+     * @param string $mode             ('tcp', 'http', 'https', 'proxy')
+     * @param string $endpointSslMode  ('off, 'on' strict')
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function updatePortConfiguration(
+        $haipName,
+        $configurationId,
+        $name,
+        $sourcePort,
+        $targetPort,
+        $mode,
+        $endpointSslMode
+    ) {
+        $this->call(
+            self::SERVICE,
+            'updatePortConfiguration',
+            [$haipName, $configurationId, $name, $sourcePort, $targetPort, $mode, $endpointSslMode]
+        );
+    }
+
+    /**
      * Delete the port configuration for the HA-IP.
      *
      * @param string $haipName        The HA-IP name
      * @param int    $configurationId The configuration ID
+     *
+     * @deprecated 5.6
+     * @see Haip::deletePortConfiguration()
      *
      * @throws \SoapFault
      *
@@ -244,6 +422,21 @@ class Haip extends AbstractApi
     public function deleteHaipPortConfiguration($haipName, $configurationId)
     {
         return $this->call(self::SERVICE, 'deleteHaipPortConfiguration', [$haipName, $configurationId]);
+    }
+
+    /**
+     * Delete the port configuration for the HA-IP.
+     *
+     * @param string $haipName     The HA-IP name
+     * @param int $configurationId The configuration ID
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function deletePortConfiguration($haipName, $configurationId)
+    {
+        return $this->call(self::SERVICE, 'deletePortConfiguration', [$haipName, $configurationId]);
     }
 
     /**
