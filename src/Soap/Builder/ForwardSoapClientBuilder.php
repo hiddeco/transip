@@ -2,6 +2,8 @@
 
 namespace TransIP\Soap\Builder;
 
+use TransIP\Model\Forward;
+
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -21,7 +23,7 @@ class ForwardSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'Forward' => 'TransIP\Model\Forward',
+            'Forward' => Forward::class,
         ];
     }
 }

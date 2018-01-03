@@ -2,6 +2,14 @@
 
 namespace TransIP\Soap\Builder;
 
+use TransIP\Model\Cronjob;
+use TransIP\Model\Db;
+use TransIP\Model\MailBox;
+use TransIP\Model\MailForward;
+use TransIP\Model\SubDomain;
+use TransIP\Model\WebHost;
+use TransIP\Model\WebHostingPackage;
+
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -21,13 +29,13 @@ class WebHostingSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'WebhostingPackage' => 'TransIP\Model\WebHostingPackage',
-            'WebHost'           => 'TransIP\Model\WebHost',
-            'Cronjob'           => 'TransIP\Model\Cronjob',
-            'MailBox'           => 'TransIP\Model\MailBox',
-            'Db'                => 'TransIP\Model\Db',
-            'MailForward'       => 'TransIP\Model\MailForward',
-            'SubDomain'         => 'TransIP\Model\SubDomain',
+            'WebhostingPackage' => WebHostingPackage::class,
+            'WebHost'           => WebHost::class,
+            'Cronjob'           => Cronjob::class,
+            'MailBox'           => MailBox::class,
+            'Db'                => Db::class,
+            'MailForward'       => MailForward::class,
+            'SubDomain'         => SubDomain::class,
         ];
     }
 }

@@ -2,6 +2,8 @@
 
 namespace TransIP\Soap\Builder;
 
+use TransIP\Model\Haip;
+
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -21,7 +23,7 @@ class HaipSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'Haip' => 'TransIP\Model\Haip',
+            'Haip' => Haip::class,
         ];
     }
 }
