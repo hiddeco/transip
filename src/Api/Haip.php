@@ -85,7 +85,7 @@ class Haip extends AbstractApi
      * HA-IP Pro feature.
      *
      * @param string $haipName      The HA-IP name
-     * @param string $balancingMode ('roundrobin', 'cookie', 'source)
+     * @param string $balancingMode ('roundrobin', 'cookie', 'source')
      * @param string $cookieName    The cookie name that pins the session if the balancing mode is 'cookie'
      *
      * @throws \SoapFault
@@ -330,23 +330,23 @@ class Haip extends AbstractApi
     /**
      * Add port configuration to the HA-IP.
      *
-     * @param string $haipName       The HA-IP name
-     * @param string $name           The name describing the port configuration
-     * @param int    $sourcePort     The port that is addressed on the HA-IP
-     * @param int    $targetPort     The port that is addressed on the VPS
-     * @param string $mode           ('tcp', 'http', 'https', 'proxy')
-     * @param string $endointSslMode ('off, 'on' strict')
+     * @param string $haipName        The HA-IP name
+     * @param string $name            The name describing the port configuration
+     * @param int    $sourcePort      The port that is addressed on the HA-IP
+     * @param int    $targetPort      The port that is addressed on the VPS
+     * @param string $mode            ('tcp', 'http', 'https', 'proxy')
+     * @param string $endpointSslMode ('off, 'on' strict')
      *
      * @throws \SoapFault
      *
      * @return mixed
      */
-    public function addPortConfiguration($haipName, $name, $sourcePort, $targetPort, $mode, $endointSslMode)
+    public function addPortConfiguration($haipName, $name, $sourcePort, $targetPort, $mode, $endpointSslMode)
     {
         $this->call(
             self::SERVICE,
             'addPortConfiguration',
-            [$haipName, $name, $sourcePort, $targetPort, $mode, $endointSslMode]
+            [$haipName, $name, $sourcePort, $targetPort, $mode, $endpointSslMode]
         );
     }
 
@@ -378,13 +378,13 @@ class Haip extends AbstractApi
     /**
      * Update port configuration for the HA-IP.
      *
-     * @param string $haipName        The HA-IP name
-     * @param int    $configurationId The configuration ID
-     * @param string $name            The name describing the port configuration
-     * @param int    $sourcePort      The port that is addressed on the HA-IP
-     * @param int    $targetPort      The port that is addressed on the VPS
-     * @param string $mode            ('tcp', 'http', 'https', 'proxy')
-     * @param string $endointSslMode  ('off, 'on' strict')
+     * @param string $haipName         The HA-IP name
+     * @param int    $configurationId  The configuration ID
+     * @param string $name             The name describing the port configuration
+     * @param int    $sourcePort       The port that is addressed on the HA-IP
+     * @param int    $targetPort       The port that is addressed on the VPS
+     * @param string $mode             ('tcp', 'http', 'https', 'proxy')
+     * @param string $endpointSslMode  ('off, 'on' strict')
      *
      * @throws \SoapFault
      *
@@ -397,12 +397,12 @@ class Haip extends AbstractApi
         $sourcePort,
         $targetPort,
         $mode,
-        $endointSslMode
+        $endpointSslMode
     ) {
         $this->call(
             self::SERVICE,
             'updatePortConfiguration',
-            [$haipName, $configurationId, $name, $sourcePort, $targetPort, $mode, $endointSslMode]
+            [$haipName, $configurationId, $name, $sourcePort, $targetPort, $mode, $endpointSslMode]
         );
     }
 
