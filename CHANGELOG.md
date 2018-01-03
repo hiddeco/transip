@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## 5.6 - TBA
+## 5.6 - 2018-01-03
 - New released features in `5.6`
     - Additional HA-IP features
     - Fixed CamelCase issues `Model\WebHost` (#11)
