@@ -2,6 +2,15 @@
 
 namespace TransIP\Soap\Builder;
 
+use TransIP\Model\DnsEntry;
+use TransIP\Model\Domain;
+use TransIP\Model\DomainAction;
+use TransIP\Model\DomainBranding;
+use TransIP\Model\DomainCheckResult;
+use TransIP\Model\Nameserver;
+use TransIP\Model\Tld;
+use TransIP\Model\WhoisContact;
+
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -21,14 +30,14 @@ class DomainSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'DomainCheckResult' => 'TransIP\Model\DomainCheckResult',
-            'Domain'            => 'TransIP\Model\Domain',
-            'Nameserver'        => 'TransIP\Model\Nameserver',
-            'WhoisContact'      => 'TransIP\Model\WhoisContact',
-            'DnsEntry'          => 'TransIP\Model\DnsEntry',
-            'DomainBranding'    => 'TransIP\Model\DomainBranding',
-            'Tld'               => 'TransIP\Model\Tld',
-            'DomainAction'      => 'TransIP\Model\DomainAction',
+            'DomainCheckResult' => DomainCheckResult::class,
+            'Domain'            => Domain::class,
+            'Nameserver'        => Nameserver::class,
+            'WhoisContact'      => WhoisContact::class,
+            'DnsEntry'          => DnsEntry::class,
+            'DomainBranding'    => DomainBranding::class,
+            'Tld'               => Tld::class,
+            'DomainAction'      => DomainAction::class,
         ];
     }
 }

@@ -2,6 +2,8 @@
 
 namespace TransIP\Soap\Builder;
 
+use TransIP\Model\DataCenterVisitor;
+
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -21,7 +23,7 @@ class ColocationSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'DataCenterVisitor' => 'TransIP\Model\DataCenterVisitor',
+            'DataCenterVisitor' => DataCenterVisitor::class,
         ];
     }
 }

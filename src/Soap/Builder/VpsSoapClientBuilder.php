@@ -2,6 +2,12 @@
 
 namespace TransIP\Soap\Builder;
 
+use TransIP\Model\OperatingSystem;
+use TransIP\Model\PrivateNetwork;
+use TransIP\Model\Product;
+use TransIP\Model\Snapshot;
+use TransIP\Model\Vps;
+
 /**
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -21,11 +27,11 @@ class VpsSoapClientBuilder extends SoapClientBuilder
     protected function getClassMap()
     {
         return [
-            'Product'           => 'TransIP\Model\Product',
-            'PrivateNetwork'    => 'TransIP\Model\PrivateNetwork',
-            'Vps'               => 'TransIP\Model\Vps',
-            'Snapshot'          => 'TransIP\Model\Snapshot',
-            'OperatingSystem'   => 'TransIP\Model\OperatingSystem',
+            'Product'           => Product::class,
+            'PrivateNetwork'    => PrivateNetwork::class,
+            'Vps'               => Vps::class,
+            'Snapshot'          => Snapshot::class,
+            'OperatingSystem'   => OperatingSystem::class,
         ];
     }
 }
