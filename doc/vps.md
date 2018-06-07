@@ -42,9 +42,25 @@ $hostname = 'baymax.foo.com';
 $client->vps()->orderVps($productName, $addons, $operatingSystemName, $hostname);
 ````
 
+#### Order a VPS with optional add-ons in AvailabilityZone.
+````php
+$productName = 'vps-bladevps-x1'
+$addons    = ['vpsAddon-1-extra-ip-address'];
+$operatingSystemName = 'ubuntu-14.04-transip';
+$hostname = 'baymax.foo.com';
+$availabilityZone = 'ams0';
+
+$client->vps()->orderVpsInAvailabilityZone($productName, $addons, $operatingSystemName, $hostname, $availabilityZone);
+````
+
 #### Clone a VPS.
 ````php
 $client->vps()->cloneVps('fooVps');
+````
+
+#### Clone a VPS to AvailabilityZone.
+````php
+$client->vps()->cloneVpsToAvailabilityZone('fooVps', 'ams01');
 ````
 
 #### Order add-ons for a VPS.
@@ -240,4 +256,9 @@ $client->vps()->setCustomerLock('fooVps', true);
 #### Handover a VPS to another TransIP user.
 ````php
 $client->vps()->handoverVps('fooVps', 'fooUsername');
+````
+
+#### Get all active Availablity zones for VPS.
+````php
+$client->vps()->getAvailableAvailabilityZones();
 ````

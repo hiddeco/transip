@@ -125,7 +125,7 @@ class Vps extends AbstractApi
     }
     
     /**
-     * Clone a VPS.
+     * Clone a VPS to AvailabilityZone.
      *
      * @param string $vpsName The vps name
      * @param string $availabilityZone Availability zone for the VPS
