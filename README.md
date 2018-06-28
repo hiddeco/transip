@@ -10,7 +10,7 @@ including extensive documentation.
 To use this library without running in to trouble you will need PHP 5.6+ or HHVM 3.6+ and Composer.
 
 1. Get the latest version of TransIP by adding the following line to your `composer.json` file
-    `"hiddeco/transip": "5.6.*"`
+    `"hiddeco/transip": "5.7.*"`
 
 2. Run `composer update` or `composer install`
 

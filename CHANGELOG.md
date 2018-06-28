@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.7 - 2018-06-28
+- New released feature in `5.7`
+    - AvailabilityZones (#14)
+
 ## 5.6 - 2018-01-03
 - New released features in `5.6`
     - Additional HA-IP features
