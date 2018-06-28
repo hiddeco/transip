@@ -91,6 +91,24 @@ class Vps extends AbstractApi
     {
         return $this->call(self::SERVICE, 'orderVps', [$productName, $addons, $operatingSystemName, $hostname]);
     }
+    
+    /**
+     * Order a VPS with optional add-ons.
+     *
+     * @param string   $productName         Name of the product
+     * @param string[] $addons              Array with additional add-ons
+     * @param string   $operatingSystemName Name of the operating system to install
+     * @param string   $hostname            Hostname for the VPS
+     * @param string   $availabilityZone    Availability zone for the VPS
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function orderVpsInAvailabilityZone($productName, array $addons, $operatingSystemName, $hostname, $availabilityZone)
+    {
+        return $this->call(self::SERVICE, 'orderVps', [$productName, $addons, $operatingSystemName, $hostname, $availabilityZone]);
+    }
 
     /**
      * Clone a VPS.
@@ -104,6 +122,21 @@ class Vps extends AbstractApi
     public function cloneVps($vpsName)
     {
         return $this->call(self::SERVICE, 'cloneVps', [$vpsName]);
+    }
+    
+    /**
+     * Clone a VPS to AvailabilityZone.
+     *
+     * @param string $vpsName The vps name
+     * @param string $availabilityZone Availability zone for the VPS
+     *
+     * @throws \SoapFault
+     *
+     * @return mixed
+     */
+    public function cloneVpsToAvailabilityZone($vpsName, $availabilityZone)
+    {
+        return $this->call(self::SERVICE, 'cloneVps', [$vpsName, $availabilityZone]);
     }
 
     /**
@@ -549,5 +582,17 @@ class Vps extends AbstractApi
     public function handoverVps($vpsName, $targetAccountName)
     {
         $this->call(self::SERVICE, 'handoverVps', [$vpsName, $targetAccountName]);
+    }
+    
+    /**
+     * Get all available availability zones.
+     *
+     * @throws \SoapFault
+     *
+     * @return \TransIP\Model\AvailabilityZone[]
+     */
+    public function getAvailableAvailabilityZones()
+    {
+        return $this->call(self::SERVICE, 'getAvailableAvailabilityZones');
     }
 }

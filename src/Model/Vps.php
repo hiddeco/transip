@@ -81,4 +81,9 @@ class Vps
      * @var bool
      */
     public $isCustomerLocked;
+    
+    /**
+     * @var string
+     */
+    public $availabilityZone;
 }
