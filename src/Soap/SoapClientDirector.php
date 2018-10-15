@@ -9,7 +9,7 @@ use TransIP\Soap\Builder\SoapClientBuilderInterface;
  */
 class SoapClientDirector
 {
-    const CLIENT_VERSION = 5.7;
+    const CLIENT_VERSION = 5.8;
 
     /**
      * @var string
