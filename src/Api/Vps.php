@@ -297,6 +297,18 @@ class Vps extends AbstractApi
     }
 
     /**
+     * Get pooled traffic information for the account.
+     *
+     * @throws \SoapFault
+     *
+     * @return array
+     */
+    public function getPooledTrafficInformation()
+    {
+        return $this->call(self::SERVICE, 'getPooledTrafficInformation');
+    }
+
+    /**
      * Start a VPS.
      *
      * @param string $vpsName Name of the VPS
